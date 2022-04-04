@@ -4,6 +4,7 @@ import com.codeclan.example.server.enums.PropertyType;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 @Entity
 @Table(name="properties")
@@ -27,7 +28,7 @@ public class Property {
     @Column(name="price_per_night")
     private int pricePerNight;
     @Column(name="description")
-    private String description;<<<<<<< feature/host-controller
+    private String description;
     @Column(name="type")
 
     private PropertyType type;
