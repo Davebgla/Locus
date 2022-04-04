@@ -1,9 +1,12 @@
 package com.codeclan.example.server.models;
 
 import com.codeclan.example.server.enums.PropertyType;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="properties")
@@ -18,16 +21,19 @@ public class Property {
     @JoinColumn(name = "host_id", nullable = false)
     private Host host;
 
+    @Column(name = "images")
+    private List<String> propertyImages;
+
+    @OneToMany(mappedBy = "property", fetch = FetchType.LAZY)
+    @JsonBackReference
+    private List<Booking> bookings;
+
     @Column(name="address")
-
-    private ArrayList<String> propertyImages;
-    private ArrayList<Booking> bookings;
-
     private String address;
     @Column(name="price_per_night")
     private int pricePerNight;
     @Column(name="description")
-    private String description;<<<<<<< feature/host-controller
+    private String description;
     @Column(name="type")
 
     private PropertyType type;
@@ -95,7 +101,7 @@ public class Property {
         this.description = description;
     }
 
-    public ArrayList<String> getPropertyImages() {
+    public List<String> getPropertyImages() {
         return propertyImages;
     }
 
@@ -103,7 +109,7 @@ public class Property {
         this.propertyImages = propertyImages;
     }
 
-    public ArrayList<Booking> getBookings() {
+    public List<Booking> getBookings() {
         return bookings;
     }
 
