@@ -1,12 +1,26 @@
 package com.codeclan.example.server.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="bookings")
 public class Booking {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @OneToOne
+    @JoinColumn(name="guest_id", nullable = false)
     private Guest guest;
+    @ManyToOne
+    @JoinColumn(name = "host_id", nullable = false)
     private Host host;
+    @ManyToOne
+    @JoinColumn(name = "property_id", nullable = false)
     private Property property;
+    @Column(name="number_of_nights")
     private int numberOfNights;
+    @Column(name="number_of_guests")
     private int numberOfGuests;
 
     public Booking(Guest guest, Host host, Property property, int numberOfNights, int numberOfGuests){

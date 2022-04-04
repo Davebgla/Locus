@@ -2,13 +2,26 @@ package com.codeclan.example.server.models;
 
 import com.codeclan.example.server.enums.PropertyType;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="properties")
 public class Property {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "host_id", nullable = false)
     private Host host;
+    @Column(name="address")
     private String address;
+    @Column(name="price_per_night")
     private int pricePerNight;
+    @Column(name="description")
     private String description;
+    @Column(name="type")
     private PropertyType type;
 
     public Property(Host host, String address, int pricePerNight, String description, PropertyType type) {
@@ -17,6 +30,10 @@ public class Property {
         this.pricePerNight = pricePerNight;
         this.description = description;
         this.type = type;
+    }
+
+    public Property(){
+
     }
 
     public PropertyType getType() {

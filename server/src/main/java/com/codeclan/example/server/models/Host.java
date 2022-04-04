@@ -1,6 +1,7 @@
 package com.codeclan.example.server.models;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.databind.annotation.JsonAppend;
 
 import javax.persistence.*;
@@ -8,13 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "hosts")
 public class Host extends User {
 
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-   @Column
+
+    @OneToMany(mappedBy = "host", fetch = FetchType.LAZY)
+    @JsonBackReference
     private List<Property> properties;
 
     public Host(String firstName, String lastName, String email, String contactNumber, int rating) {
