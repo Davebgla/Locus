@@ -2,10 +2,13 @@ package com.codeclan.example.server.models;
 
 import com.codeclan.example.server.enums.PropertyType;
 
+import java.util.ArrayList;
+
 public class Property {
 
     private Long id;
     private Host host;
+    private ArrayList<String> propertyImages;
     private String address;
     private int pricePerNight;
     private String description;
@@ -17,7 +20,10 @@ public class Property {
         this.pricePerNight = pricePerNight;
         this.description = description;
         this.type = type;
+        this.propertyImages = new ArrayList<>();
     }
+
+    public Property(){}
 
     public PropertyType getType() {
         return type;
@@ -65,5 +71,13 @@ public class Property {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public ArrayList<String> getPropertyImages() {
+        return propertyImages;
+    }
+
+    public void setPropertyImages(ArrayList<String> propertyImages) {
+        this.propertyImages = propertyImages;
     }
 }
