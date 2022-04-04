@@ -1,11 +1,23 @@
 package com.codeclan.example.server.models;
 
-public abstract class User {
+import javax.persistence.*;
 
+@Entity
+@Inheritance(strategy= InheritanceType.TABLE_PER_CLASS)
+public abstract class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
+
+    @Column(name="first_name")
     private String firstName;
+    @Column(name="last_name")
     private String lastName;
+    @Column(name="email")
     private String email;
+    @Column(name="contact_number")
     private String contactNumber;
+    @Column(name="rating")
     private int rating;
 
     public User(String firstName, String lastName, String email, String contactNumber, int rating) {
@@ -18,6 +30,14 @@ public abstract class User {
 
     public User(){
 
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
