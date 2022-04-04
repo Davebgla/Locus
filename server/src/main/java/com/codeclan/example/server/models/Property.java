@@ -9,6 +9,7 @@ public class Property {
     private Long id;
     private Host host;
     private ArrayList<String> propertyImages;
+    private ArrayList<Booking> bookings;
     private String address;
     private int pricePerNight;
     private String description;
@@ -21,6 +22,7 @@ public class Property {
         this.description = description;
         this.type = type;
         this.propertyImages = new ArrayList<>();
+        this.bookings = new ArrayList<>();
     }
 
     public Property(){}
@@ -79,5 +81,13 @@ public class Property {
 
     public void setPropertyImages(ArrayList<String> propertyImages) {
         this.propertyImages = propertyImages;
+    }
+
+    public ArrayList<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(ArrayList<Booking> bookings) {
+        this.bookings = bookings;
     }
 }
