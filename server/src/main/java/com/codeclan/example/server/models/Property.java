@@ -1,6 +1,7 @@
 package com.codeclan.example.server.models;
 
 import com.codeclan.example.server.enums.PropertyType;
+import org.springframework.web.bind.annotation.GetMapping;
 
 
 import javax.persistence.*;
@@ -19,11 +20,11 @@ public class Property {
     @JoinColumn(name = "host_id", nullable = false)
     private Host host;
 
-    @Column(name="address")
 
     private ArrayList<String> propertyImages;
     private ArrayList<Booking> bookings;
 
+    @Column(name="address")
     private String address;
     @Column(name="price_per_night")
     private int pricePerNight;
