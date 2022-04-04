@@ -8,10 +8,10 @@ public class Property {
 
     private Long id;
     private Host host;
-    private ArrayList<String> propertyImages;
     private String address;
     private int pricePerNight;
     private String description;
+    private ArrayList<String> propertyImages;
     private PropertyType type;
 
     public Property(Host host, String address, int pricePerNight, String description, PropertyType type) {
