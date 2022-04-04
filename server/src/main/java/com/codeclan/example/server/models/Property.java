@@ -1,12 +1,18 @@
 package com.codeclan.example.server.models;
 
 import com.codeclan.example.server.enums.PropertyType;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 
 import javax.persistence.*;
 import java.util.ArrayList;
+
 import java.util.List;
+
 
 @Entity
 @Table(name="properties")
@@ -21,8 +27,10 @@ public class Property {
     @JoinColumn(name = "host_id", nullable = false)
     private Host host;
 
+
     @Column(name = "images")
     private List<String> propertyImages;
+
 
     @OneToMany(mappedBy = "property", fetch = FetchType.LAZY)
     @JsonBackReference
