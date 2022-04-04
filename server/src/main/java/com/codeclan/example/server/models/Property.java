@@ -2,7 +2,7 @@ package com.codeclan.example.server.models;
 
 public class Property {
 
-    private long id;
+    private Long id;
     private Host host;
     private String address;
     private int pricePerNight;
@@ -13,11 +13,11 @@ public class Property {
         this.pricePerNight = pricePerNight;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
