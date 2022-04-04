@@ -59,4 +59,8 @@ public abstract class User {
     public void setRating(int rating) {
         this.rating = rating;
     }
+
+    public int test(){
+        return 10;
+    }
 }
