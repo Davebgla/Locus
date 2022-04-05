@@ -27,7 +27,7 @@ public class GuestController {
     }
 
     @PostMapping(value="/guests")
-    public ResponseEntity postProperty(@RequestBody Guest guest){
+    public ResponseEntity postGuest(@RequestBody Guest guest){
         guestRepository.save(guest);
         return new ResponseEntity<>(guest, HttpStatus.CREATED);
     }
