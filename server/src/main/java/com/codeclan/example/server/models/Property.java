@@ -4,9 +4,6 @@ import com.codeclan.example.server.enums.PropertyType;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-import org.springframework.web.bind.annotation.GetMapping;
-
-
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,7 +13,6 @@ import java.util.List;
 
 @Entity
 @Table(name="properties")
-
 public class Property {
 
     @Id
@@ -28,8 +24,9 @@ public class Property {
     private Host host;
 
 
-    @Column(name = "images")
-    private List<String> propertyImages;
+    @OneToMany(mappedBy="property", fetch = FetchType.LAZY)
+    @JsonBackReference
+    private List<Image> propertyImages;
 
 
     @OneToMany(mappedBy = "property", fetch = FetchType.LAZY)
@@ -109,11 +106,11 @@ public class Property {
         this.description = description;
     }
 
-    public List<String> getPropertyImages() {
+    public List<Image> getPropertyImages() {
         return propertyImages;
     }
 
-    public void setPropertyImages(ArrayList<String> propertyImages) {
+    public void setPropertyImages(List<Image> propertyImages) {
         this.propertyImages = propertyImages;
     }
 
@@ -121,7 +118,7 @@ public class Property {
         return bookings;
     }
 
-    public void setBookings(ArrayList<Booking> bookings) {
+    public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
     }
 }
