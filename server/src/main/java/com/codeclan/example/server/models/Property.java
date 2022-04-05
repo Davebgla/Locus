@@ -3,6 +3,7 @@ package com.codeclan.example.server.models;
 import com.codeclan.example.server.enums.PropertyType;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 import javax.persistence.*;
@@ -25,7 +26,7 @@ public class Property {
 
 
     @OneToMany(mappedBy="property", fetch = FetchType.LAZY)
-    @JsonBackReference
+    @JsonIgnoreProperties
     private List<Image> propertyImages;
 
 
@@ -33,8 +34,8 @@ public class Property {
     @JsonBackReference
     private List<Booking> bookings;
 
-    @Column(name="address")
-    private String address;
+    @Column(name="city")
+    private String city;
     @Column(name="price_per_night")
     private int pricePerNight;
     @Column(name="description")
@@ -43,9 +44,9 @@ public class Property {
 
     private PropertyType type;
 
-    public Property(Host host, String address, int pricePerNight, String description, PropertyType type) {
+    public Property(Host host, String city, int pricePerNight, String description, PropertyType type) {
         this.host = host;
-        this.address = address;
+        this.city = city;
         this.pricePerNight = pricePerNight;
         this.description = description;
         this.type = type;
@@ -57,6 +58,9 @@ public class Property {
 
     }
 
+    public void addImage(Image image){
+        this.propertyImages.add(image);
+    }
 
     public PropertyType getType() {
         return type;
@@ -82,12 +86,12 @@ public class Property {
         this.host = host;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCity() {
+        return city;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCity(String address) {
+        this.city = city;
     }
 
     public int getPricePerNight() {

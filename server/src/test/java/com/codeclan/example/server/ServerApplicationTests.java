@@ -1,15 +1,13 @@
 package com.codeclan.example.server;
 
 import com.codeclan.example.server.enums.PropertyType;
-import com.codeclan.example.server.models.Guest;
-import com.codeclan.example.server.models.Host;
-import com.codeclan.example.server.models.Property;
-import com.codeclan.example.server.models.User;
+import com.codeclan.example.server.models.*;
 import com.codeclan.example.server.repositories.BookingRepository;
 import com.codeclan.example.server.repositories.GuestRepository;
 import com.codeclan.example.server.repositories.HostRepository;
 import com.codeclan.example.server.repositories.PropertyRepository;
 import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -49,6 +47,17 @@ class ServerApplicationTests {
 		propertyRepository.save(property2);
 		propertyRepository.deleteById(property2.getId());
 		assertEquals(1, propertyRepository.findAll().size());
+	}
+
+	@Test
+	public void canAddImageToProperty(){
+		Host host1 = new Host("Boris", "Johnson", "bj@?????.co.uk", "908070605", 3);
+		hostRepository.save(host1);
+		Property property2 = new Property(host1, "No. 11", 420, "The chancellor's digs", PropertyType.THREE_BED);
+		propertyRepository.save(property2);
+		Image image = new Image("../images/image.png", property2);
+		property2.addImage(image);
+		assertEquals(1, property2.getPropertyImages().size());
 	}
 
 }
