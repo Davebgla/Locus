@@ -49,15 +49,4 @@ class ServerApplicationTests {
 		assertEquals(1, propertyRepository.findAll().size());
 	}
 
-	@Test
-	public void canAddImageToProperty(){
-		Host host1 = new Host("Boris", "Johnson", "bj@?????.co.uk", "908070605", 3);
-		hostRepository.save(host1);
-		Property property2 = new Property(host1, "No. 11", 420, "The chancellor's digs", PropertyType.THREE_BED);
-		propertyRepository.save(property2);
-		Image image = new Image("../images/image.png", property2);
-		property2.addImage(image);
-		assertEquals(1, property2.getPropertyImages().size());
-	}
-
 }
