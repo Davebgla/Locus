@@ -24,14 +24,13 @@ public class Property {
     @JoinColumn(name = "host_id", nullable = false)
     private Host host;
 
-
+    @JsonIgnoreProperties({"property"})
     @OneToMany(mappedBy="property", fetch = FetchType.LAZY)
-    @JsonIgnoreProperties
-    private List<Image> propertyImages;
+    private List<Image> images;
 
 
+    @JsonIgnoreProperties({"property"})
     @OneToMany(mappedBy = "property", fetch = FetchType.LAZY)
-    @JsonBackReference
     private List<Booking> bookings;
 
     @Column(name="city")
@@ -50,16 +49,12 @@ public class Property {
         this.pricePerNight = pricePerNight;
         this.description = description;
         this.type = type;
-        this.propertyImages = new ArrayList<>();
+        this.images = new ArrayList<>();
         this.bookings = new ArrayList<>();
     }
 
     public Property(){
 
-    }
-
-    public void addImage(Image image){
-        this.propertyImages.add(image);
     }
 
     public PropertyType getType() {
@@ -110,12 +105,12 @@ public class Property {
         this.description = description;
     }
 
-    public List<Image> getPropertyImages() {
-        return propertyImages;
+    public List<Image> getImages() {
+        return images;
     }
 
-    public void setPropertyImages(List<Image> propertyImages) {
-        this.propertyImages = propertyImages;
+    public void setPropertyImages(List<Image> images) {
+        this.images = images;
     }
 
     public List<Booking> getBookings() {
