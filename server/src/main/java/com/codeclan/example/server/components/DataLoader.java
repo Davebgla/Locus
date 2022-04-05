@@ -1,10 +1,7 @@
 package com.codeclan.example.server.components;
 
 import com.codeclan.example.server.enums.PropertyType;
-import com.codeclan.example.server.models.Booking;
-import com.codeclan.example.server.models.Guest;
-import com.codeclan.example.server.models.Host;
-import com.codeclan.example.server.models.Property;
+import com.codeclan.example.server.models.*;
 import com.codeclan.example.server.repositories.BookingRepository;
 import com.codeclan.example.server.repositories.GuestRepository;
 import com.codeclan.example.server.repositories.HostRepository;
@@ -29,20 +26,38 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     PropertyRepository propertyRepository;
 
+    Property property1;
 
     public DataLoader() {
 
     }
 
-    public void run(ApplicationArguments args){
+    public void run(ApplicationArguments args) {
 
-        Guest guest1 = new Guest("Taylor", "Paterson", "tp@greatemail.co.uk", "12missafew5", 7);
+        Guest guest1 = new Guest("Steve", "Mieklejohn", "steve@codeclan.com", "(519)-490-1416", 4);
         guestRepository.save(guest1);
+        Guest guest2 = new Guest("Craig", "Gough", "craig@codeclan.com", "(673)-179-1238", 3);
+        guestRepository.save(guest2);
+        Guest guest3 = new Guest("Stan", "Tarnev", "stan@codeclan.com", "(987)-639-2345", 1);
+        guestRepository.save(guest3);
+        Guest guest4 = new Guest("Jennifer", "Ramsay", "jen@codeclan.com", "(369)-143-0987", 3);
+        guestRepository.save(guest4);
+        Guest guest5 = new Guest("Ash", "Healy", "ash@codeclan.com", "(876)-333-0912", 5);
+        guestRepository.save(guest5);
 
-        Host host1 = new Host("Boris", "Johnson", "bj@?????.co.uk", "908070605", 3);
+        Host host1 = new Host("David", "Bell", "davebgla@gmail.com", "(666)-891-0376", 2);
         hostRepository.save(host1);
+        Host host2 = new Host("Rory", "Smith", "rory-smith14@hotmail.co.uk", "(901)-322-0910", 4);
+        hostRepository.save(host2);
+        Host host3 = new Host("Taylor", "Paterson", "taylorpaterson7@hotmail.com", "(111)-671-7543", 5);
+        hostRepository.save(host3);
+        Host host4 = new Host("David", "Abercrombie", "abercrombiedj2@gmail.com", "(608)-555-4321", 1);
+        hostRepository.save(host4);
 
-        Property property1 = new Property(host1, "number 10", 69, "I am, the description", PropertyType.LODGE );
+        Image image = new Image("../images/image.png", property1);
+
+        Property property1 = new Property(host1, "number 10", 69, "I am, the description", PropertyType.LODGE);
+        property1.addImage(image);
         propertyRepository.save(property1);
 
         Booking booking1 = new Booking(guest1, host1, property1, 2, 1);
