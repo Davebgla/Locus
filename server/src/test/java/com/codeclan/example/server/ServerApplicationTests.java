@@ -1,15 +1,13 @@
 package com.codeclan.example.server;
 
 import com.codeclan.example.server.enums.PropertyType;
-import com.codeclan.example.server.models.Guest;
-import com.codeclan.example.server.models.Host;
-import com.codeclan.example.server.models.Property;
-import com.codeclan.example.server.models.User;
+import com.codeclan.example.server.models.*;
 import com.codeclan.example.server.repositories.BookingRepository;
 import com.codeclan.example.server.repositories.GuestRepository;
 import com.codeclan.example.server.repositories.HostRepository;
 import com.codeclan.example.server.repositories.PropertyRepository;
 import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

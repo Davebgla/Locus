@@ -3,6 +3,7 @@ package com.codeclan.example.server.models;
 import com.codeclan.example.server.enums.PropertyType;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 import javax.persistence.*;
@@ -23,18 +24,17 @@ public class Property {
     @JoinColumn(name = "host_id", nullable = false)
     private Host host;
 
-
+    @JsonIgnoreProperties({"property"})
     @OneToMany(mappedBy="property", fetch = FetchType.LAZY)
-    @JsonBackReference
-    private List<Image> propertyImages;
+    private List<Image> images;
 
 
+    @JsonIgnoreProperties({"property"})
     @OneToMany(mappedBy = "property", fetch = FetchType.LAZY)
-    @JsonBackReference
     private List<Booking> bookings;
 
-    @Column(name="address")
-    private String address;
+    @Column(name="city")
+    private String city;
     @Column(name="price_per_night")
     private int pricePerNight;
     @Column(name="description")
@@ -43,20 +43,19 @@ public class Property {
 
     private PropertyType type;
 
-    public Property(Host host, String address, int pricePerNight, String description, PropertyType type) {
+    public Property(Host host, String city, int pricePerNight, String description, PropertyType type) {
         this.host = host;
-        this.address = address;
+        this.city = city;
         this.pricePerNight = pricePerNight;
         this.description = description;
         this.type = type;
-        this.propertyImages = new ArrayList<>();
+        this.images = new ArrayList<>();
         this.bookings = new ArrayList<>();
     }
 
     public Property(){
 
     }
-
 
     public PropertyType getType() {
         return type;
@@ -82,12 +81,12 @@ public class Property {
         this.host = host;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCity() {
+        return city;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCity(String address) {
+        this.city = city;
     }
 
     public int getPricePerNight() {
@@ -106,12 +105,12 @@ public class Property {
         this.description = description;
     }
 
-    public List<Image> getPropertyImages() {
-        return propertyImages;
+    public List<Image> getImages() {
+        return images;
     }
 
-    public void setPropertyImages(List<Image> propertyImages) {
-        this.propertyImages = propertyImages;
+    public void setPropertyImages(List<Image> images) {
+        this.images = images;
     }
 
     public List<Booking> getBookings() {
