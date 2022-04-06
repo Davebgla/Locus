@@ -4,8 +4,9 @@ public enum PropertyType {
     ONE_BED(1, 2),
     TWO_BED(2, 4),
     THREE_BED(3, 6),
+    COTTAGE(2, 4),
     LODGE(4, 8),
-    VILLA(6, 12);
+    MANSION(6, 12);
 
     private final int numberOfBeds;
     private final int numberOfGuests;
