@@ -1,7 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import Featured from './components/Featured';
-import Events from './components/Events';
+import Pages from './pages/Pages';
 import { BrowserRouter } from 'react-router-dom';
 
 function App() {
@@ -23,8 +22,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Featured properties={properties} />
-      <Events />
+      <Pages properties={properties} />
       </BrowserRouter>
     </div>
   );
