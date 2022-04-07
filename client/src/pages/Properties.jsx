@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Button, Typography, Rating} from "@mui/material"
+import { Link } from 'react-router-dom';
 
 
 function PropertyList({properties}){
@@ -16,7 +17,7 @@ function PropertyList({properties}){
                     <Rating name="read-only" value={property.host["rating"]}readOnly />
                     <img src={property.images[0].url} width="300" height="200"/>
                     <p>£ {property.pricePerNight} / per night</p>
-                    <Button href={"/api/properties/" + property.id} variant="contained">View</Button>
+                    <Link to={"/properties/" + property.id}>View</Link>
                 </Card>
             </Wrapper>
         )
