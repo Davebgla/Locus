@@ -14,9 +14,9 @@ function PropertyList({properties}){
                     <h3>{property.description}</h3>
                     <h3>{property.host["firstName"]}</h3>
                     <Typography component="legend"/>
-                    <Rating name="read-only" value={property.host["rating"]}readOnly />
                     <img src={property.images[0].url} width="300" height="200"/>
                     <p>£ {property.pricePerNight} / per night</p>
+                    <Rating name="read-only" value={property.host["rating"]}readOnly />
                     <Link to={"/properties/" + property.id}>View</Link>
                 </Card>
             </Wrapper>
@@ -36,8 +36,23 @@ export default PropertyList;
 
 const Wrapper = styled.div`
     margin: 4rem 0rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
 `;
 
 const Card = styled.div`
-    
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgb(68, 67, 67);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+
+    img{
+        border-radius: 1rem;
+    }
 `
