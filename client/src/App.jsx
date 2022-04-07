@@ -19,6 +19,7 @@ function App() {
     setProperties(data);
   }
 
+
   return (
     <div className="App">
       <BrowserRouter>

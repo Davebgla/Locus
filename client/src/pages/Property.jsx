@@ -9,7 +9,7 @@ function Property({properties}){
     useEffect(() => {
         if(params){
         const foundProperty = findPropertyById(params)
-                console.log(foundProperty)
+                console.log(properties)
                     setProperty(foundProperty)
 
         }

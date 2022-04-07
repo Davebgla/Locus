@@ -21,7 +21,7 @@ function Featured({properties}) {
                     return(
                         <SplideSlide key={property.id}>
                             <Card>
-                                <Link to={"/api/properties/" + property.id}>
+                                <Link to={"/properties/" + property.id}>
                                     <p>{property.city}</p>
                                     <img src={property.images[0].url} width="300" height="200"/>
                                     <Gradient />
