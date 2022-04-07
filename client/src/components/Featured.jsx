@@ -1,24 +1,9 @@
-import { useEffect, useState } from 'react';
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/splide/dist/css/splide.min.css';
 import { Link } from 'react-router-dom';
 
-function Featured() {
-
-  const [properties, setProperties] = useState([]);
-
-  useEffect(() => {
-    getProperties();
-  }, []);
-
-  const getProperties = async () => {
-
-    const api = await fetch('http://localhost:8080/api/properties');
-    const data = await api.json();
-
-    setProperties(data);
-  }
+function Featured({properties}) {
 
   const featured = properties.splice(0, 10);
 
