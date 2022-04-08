@@ -42,7 +42,6 @@ public class Property {
     @Column(name="description")
     private String description;
     @Column(name="type")
-
     private PropertyType type;
 
     public Property(Host host, String location, String postcode, int pricePerNight, String description, PropertyType type) {

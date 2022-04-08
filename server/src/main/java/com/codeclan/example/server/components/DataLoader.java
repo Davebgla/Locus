@@ -231,7 +231,7 @@ public class DataLoader implements ApplicationRunner {
         imageRepository.save(image20_2);
         Image image20_3 = new Image("https://a0.muscache.com/im/pictures/57872b0f-4510-4421-9706-b2b66bd864b8.jpg?im_w=720", property20);
         imageRepository.save(image20_3);
-
+      
         Booking booking1 = new Booking(guest1, property1, 2, 1);
         bookingRepository.save(booking1);
 
