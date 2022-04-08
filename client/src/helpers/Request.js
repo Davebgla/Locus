@@ -7,6 +7,15 @@ class Request {
       body: JSON.stringify(payload),
     });
   }
+
+  postBooking(url, payload) {
+    console.log("Posting!", payload);
+    return fetch("/api/bookings", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(payload),
+    });
+  }
 }
 
 export default Request;

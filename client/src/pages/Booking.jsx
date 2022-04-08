@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 
-function Property({properties}){
+function Booking({properties}){
 
     let params = useParams()
     const [property, setProperty] = useState(null)
@@ -31,4 +31,4 @@ function Property({properties}){
     )
 }
 
-export default Property;
+export default Booking;
