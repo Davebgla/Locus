@@ -38,13 +38,12 @@ const Wrapper = styled.div`
     margin: 4rem 0rem;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    
 `;
+
 
 const Card = styled.div`
     border-radius: 10px;
-    box-shadow: 0px 5px 20px rgb(68, 67, 67);
+    box-shadow: 0px 2px 10px rgb(68, 67, 67);
     padding: 15px;
     display: flex;
     flex-direction: column;
