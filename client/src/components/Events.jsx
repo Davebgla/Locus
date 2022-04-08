@@ -14,7 +14,7 @@ function Events(){
   
     const getEvents = async () => {
   
-      const api = await fetch('https://www.skiddle.com/api/v1/events/search/?api_key=7f5155bb08a9593213df1dc5ec1fde22&latitude=55.8597&longitude=-4.2550&radius=200&eventcode=LIVE&order=trending&description=1');
+      const api = await fetch('https://www.skiddle.com/api/v1/events/search/?api_key=7f5155bb08a9593213df1dc5ec1fde22&latitude=55.8597&longitude=-4.2550&radius=40&eventcode=LIVE&order=trending&description=1');
       const data = await api.json();
   
       setEvents(data.results);
