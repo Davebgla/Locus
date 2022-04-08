@@ -13,9 +13,6 @@ public class Booking {
     @JoinColumn(name="guest_id", nullable = false)
     private Guest guest;
     @ManyToOne
-    @JoinColumn(name = "host_id", nullable = false)
-    private Host host;
-    @ManyToOne
     @JoinColumn(name = "property_id", nullable = false)
     private Property property;
     @Column(name="number_of_nights")
@@ -23,9 +20,8 @@ public class Booking {
     @Column(name="number_of_guests")
     private int numberOfGuests;
 
-    public Booking(Guest guest, Host host, Property property, int numberOfNights, int numberOfGuests){
+    public Booking(Guest guest, Property property, int numberOfNights, int numberOfGuests){
         this.guest = guest;
-        this.host = host;
         this.property = property;
         this.numberOfNights = numberOfNights;
         this.numberOfGuests = numberOfGuests;
@@ -47,14 +43,6 @@ public class Booking {
 
     public void setGuest(Guest guest){
         this.guest = guest;
-    }
-
-    public Host getHost(){
-        return this.host;
-    }
-
-    public void setHost(Host host){
-        this.host = host;
     }
 
     public Property getProperty(){

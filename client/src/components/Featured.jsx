@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 
 function Featured({properties}) {
 
-  const featured = properties.splice(0, 10);
+    const copyProperties = [...properties]
+    const featured = copyProperties.splice(0, 10);
 
   return (
     <div className="featured">
@@ -21,7 +22,7 @@ function Featured({properties}) {
                     return(
                         <SplideSlide key={property.id}>
                             <Card>
-                                <Link to={"/api/properties/" + property.id}>
+                                <Link to={"/properties/" + property.id}>
                                     <p>{property.city}</p>
                                     <img src={property.images[0].url} width="300" height="200"/>
                                     <Gradient />

@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
 
   const [properties, setProperties] = useState([]);
+  
 
   useEffect(() => {
     getProperties();
@@ -13,16 +14,17 @@ function App() {
 
   const getProperties = async () => {
 
-    const api = await fetch('http://localhost:8080/api/properties');
+    const api = await fetch('/api/properties');
     const data = await api.json();
 
     setProperties(data);
   }
 
+
   return (
     <div className="App">
       <BrowserRouter>
-      <Pages properties={properties} />
+      <Pages properties={properties}/>
       </BrowserRouter>
     </div>
   );
