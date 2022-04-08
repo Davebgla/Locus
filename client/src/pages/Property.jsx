@@ -30,7 +30,7 @@ function Property({guest, properties, onCreateBooking}){
         <div className='property'>
        {property &&
             <Wrapper>
-                    <h3>City: {property.city}</h3>
+                    <h3>City: {property.location}</h3>
                     <h3>Property Description: {property.description}</h3>
                     <h3>Host Name: {property.host["firstName"]}</h3>
                     <Typography component="legend"/>

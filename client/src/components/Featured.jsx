@@ -23,7 +23,7 @@ function Featured({properties}) {
                         <SplideSlide key={property.id}>
                             <Card>
                                 <Link to={"/properties/" + property.id}>
-                                    <p>{property.city}</p>
+                                    <p>{property.location}</p>
                                     <img src={property.images[0].url} width="300" height="200"/>
                                     <Gradient />
                                 </Link>

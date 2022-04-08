@@ -54,7 +54,7 @@ public class DataLoader implements ApplicationRunner {
 
         Property property1 = new Property(host4, "Oban", "PA344AA", 150, "Katie's Flat is a 4 star self catering apartment situated in a quiet residential area surrounded by views of the hills.", PropertyType.ONE_BED);
         propertyRepository.save(property1);
-        Image image1_1 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-33765645/original/775a6d7c-11c8-40c2-9370-47848a1e9b5c.jpeg?im_w=1200", property1)
+        Image image1_1 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-33765645/original/775a6d7c-11c8-40c2-9370-47848a1e9b5c.jpeg?im_w=1200", property1);
         imageRepository.save(image1_1);
         Image image1_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-33765645/original/68bb49d2-478a-483a-b71a-c7b99cfb6818.jpeg?im_w=1440", property1);
         imageRepository.save(image1_2);
