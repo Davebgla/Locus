@@ -33,8 +33,10 @@ public class Property {
     @OneToMany(mappedBy = "property", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
-    @Column(name="city")
-    private String city;
+    @Column(name="location")
+    private String location;
+    @Column(name="postcode")
+    private String postcode;
     @Column(name="price_per_night")
     private int pricePerNight;
     @Column(name="description")
@@ -43,9 +45,10 @@ public class Property {
 
     private PropertyType type;
 
-    public Property(Host host, String city, int pricePerNight, String description, PropertyType type) {
+    public Property(Host host, String location, String postcode, int pricePerNight, String description, PropertyType type) {
         this.host = host;
-        this.city = city;
+        this.location = location;
+        this.postcode = postcode;
         this.pricePerNight = pricePerNight;
         this.description = description;
         this.type = type;
@@ -55,6 +58,14 @@ public class Property {
 
     public Property(){
 
+    }
+
+    public String getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
     }
 
     public PropertyType getType() {
@@ -81,12 +92,12 @@ public class Property {
         this.host = host;
     }
 
-    public String getCity() {
-        return city;
+    public String getLocation() {
+        return location;
     }
 
-    public void setCity(String address) {
-        this.city = city;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public int getPricePerNight() {
