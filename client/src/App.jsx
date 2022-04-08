@@ -13,7 +13,7 @@ function App() {
 
   const getProperties = async () => {
 
-    const api = await fetch('http://localhost:8080/api/properties');
+    const api = await fetch('/api/properties');
     const data = await api.json();
 
     setProperties(data);

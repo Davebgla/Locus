@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 
 function Featured({properties}) {
 
-  const featured = properties.splice(0, 10);
+    const copyProperties = [...properties]
+    const featured = copyProperties.splice(0, 10);
 
   return (
     <div className="featured">
