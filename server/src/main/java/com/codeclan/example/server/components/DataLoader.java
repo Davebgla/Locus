@@ -52,43 +52,43 @@ public class DataLoader implements ApplicationRunner {
         Host host4 = new Host("David", "Abercrombie", "abercrombiedj2@gmail.com", "(608)-555-4321", 1);
         hostRepository.save(host4);
 
-        Property property1 = new Property(host4, "Inverness", 158, "Cosy cottage in the country with beautiful views set on a farm.", PropertyType.COTTAGE);
+        Property property1 = new Property(host4, "Oban", "PA344AA", 150, "Katie's Flat is a 4 star self catering apartment situated in a quiet residential area surrounded by views of the hills.", PropertyType.ONE_BED);
         propertyRepository.save(property1);
-        Image image1_1 = new Image("https://a0.muscache.com/im/pictures/1b6bb080-45a3-4746-9493-92e7208b2037.jpg?im_w=720", property1);
+        Image image1_1 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-33765645/original/775a6d7c-11c8-40c2-9370-47848a1e9b5c.jpeg?im_w=1200", property1)
         imageRepository.save(image1_1);
-        Image image1_2 = new Image("https://a0.muscache.com/im/pictures/359a08ad-7455-4f4e-8b53-56c90d63caed.jpg?im_w=720", property1);
+        Image image1_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-33765645/original/68bb49d2-478a-483a-b71a-c7b99cfb6818.jpeg?im_w=1440", property1);
         imageRepository.save(image1_2);
-        Image image1_3 = new Image("https://a0.muscache.com/im/pictures/c39768df-1a80-4560-854f-91d9893048c2.jpg?im_w=720", property1);
+        Image image1_3 = new Image("https://a0.muscache.com/im/pictures/de4ec606-f64b-4f98-8f9d-d79eddf4ac9f.jpg?im_w=1440", property1);
         imageRepository.save(image1_3);
 
-        Property property2 = new Property(host4, "Glasgow", 60, "You won't forget your time in this memorable place. Self catering caravan a short walk to the shore.", PropertyType.ONE_BED);
+        Property property2 = new Property(host4, "Pitlochry", "PH165DS", 65, "This beautiful double room has a private en-suite, lots of storage and fantastic views of Ben y Vrackie.", PropertyType.ONE_BED);
         propertyRepository.save(property2);
-        Image image2_1 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-52019199/original/10ebd15b-8320-4acc-a752-bf994cdf15c8.jpeg?im_w=1200", property2);
+        Image image2_1 = new Image("https://a0.muscache.com/im/pictures/8e629678-c625-4818-a991-bf920ba6ee0a.jpg?im_w=1200", property2);
         imageRepository.save(image2_1);
-        Image image2_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-52019199/original/5044bd17-1cff-4436-b1b7-d07d3b88874c.jpeg?im_w=720", property2);
+        Image image2_2 = new Image("https://a0.muscache.com/im/pictures/fc652254-85de-4f31-89a2-24dba3ae65ca.jpg?im_w=1440", property2);
         imageRepository.save(image2_2);
-        Image image2_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-52019199/original/8d2bf016-9416-4177-8bdb-b9336375edf8.jpeg?im_w=720", property2);
+        Image image2_3 = new Image("https://a0.muscache.com/im/pictures/a5ec2bed-1d55-4053-8ae4-9ccebbef3f73.jpg?im_w=1440", property2);
         imageRepository.save(image2_3);
 
-        Property property3 = new Property(host4, "Aberdeen", 40, "Off-grid Bothy in a remote location.", PropertyType.LODGE);
+        Property property3 = new Property(host4, "Edinburgh", "EH11AA", 225, "Set in the heart of Edinburgh’s city centre the Chaumer Abide is a beautiful bedroom with bathroom in a lovingly restored Georgian suite.", PropertyType.LODGE);
         propertyRepository.save(property3);
-        Image image3_1 = new Image("https://a0.muscache.com/im/pictures/43051403-8399-4f55-8f08-2ffc76a17fb7.jpg?im_w=1200", property3);
+        Image image3_1 = new Image("https://a0.muscache.com/im/pictures/678adb51-7473-4ff1-92c2-c7de2eb3b2e8.jpg?im_w=1200", property3);
         imageRepository.save(image3_1);
-        Image image3_2 = new Image("https://a0.muscache.com/im/pictures/99969178-d4c9-45db-94f4-a7b42c8849a5.jpg?im_w=1200", property3);
+        Image image3_2 = new Image("https://a0.muscache.com/im/pictures/087f0d28-682c-4b5f-aaef-da05a5117dc5.jpg?im_w=1440", property3);
         imageRepository.save(image3_2);
-        Image image3_3 = new Image("https://a0.muscache.com/im/pictures/ef7e80c7-3aee-49c7-a79f-1eab938158fb.jpg?im_w=1200", property3);
+        Image image3_3 = new Image("https://a0.muscache.com/im/pictures/63da1379-3c3e-4c90-9596-163ed2a2a6e2.jpg?im_w=1440", property3);
         imageRepository.save(image3_3);
 
-        Property property4 = new Property(host4, "Edinburgh", 399, "A luxury, spacious holiday home with hot tub and sauna.", PropertyType.MANSION);
+        Property property4 = new Property(host4, "Newburgh", "KY146AE",  115, "The Herdsman’s bothy really brings the outdoors in with panoramic views across the beautiful Aberdeenshire coast.", PropertyType.ONE_BED);
         propertyRepository.save(property4);
-        Image image4_1 = new Image("https://a0.muscache.com/im/pictures/cb2a46ec-b498-4e32-beab-aa42685471ae.jpg?im_w=720", property4);
+        Image image4_1 = new Image("https://a0.muscache.com/im/pictures/f54ac129-0be1-41b3-a7ed-ad65f34e2ade.jpg?im_w=1440", property4);
         imageRepository.save(image4_1);
-        Image image4_2 = new Image("https://a0.muscache.com/im/pictures/954468ac-ed8d-4a84-becf-8a8af42427bc.jpg?im_w=1200", property4);
+        Image image4_2 = new Image("https://a0.muscache.com/im/pictures/5e8d2bc1-d565-4ec1-9b4e-434ee14b2b60.jpg?im_w=1200", property4);
         imageRepository.save(image4_2);
-        Image image4_3 = new Image("https://a0.muscache.com/im/pictures/be12e574-734d-49e8-b694-2cb952f65410.jpg?im_w=720", property4);
+        Image image4_3 = new Image("https://a0.muscache.com/im/pictures/2ad02145-d86a-4ac3-8913-f010ba9f494d.jpg?im_w=1440", property4);
         imageRepository.save(image4_3);
 
-        Property property5 = new Property(host4, "Stirling", 106, "Stunning Georgian townhouse located right in the city centre.", PropertyType.TWO_BED);
+        Property property5 = new Property(host4, "Stirling", "IV11DJ", 106, "Stunning Georgian townhouse located right in the city centre.", PropertyType.TWO_BED);
         propertyRepository.save(property5);
         Image image5_1 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-11320454/original/82f96463-c859-4042-8e0d-4fb64e6b3cf2.jpeg?im_w=1200", property5);
         imageRepository.save(image5_1);
