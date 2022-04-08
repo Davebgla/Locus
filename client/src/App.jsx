@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
 
   const [properties, setProperties] = useState([]);
+  
 
   useEffect(() => {
     getProperties();
@@ -23,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Pages properties={properties} />
+      <Pages properties={properties}/>
       </BrowserRouter>
     </div>
   );
