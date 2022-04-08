@@ -97,7 +97,7 @@ public class DataLoader implements ApplicationRunner {
         Image image5_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-11320454/original/133ccb72-e6c7-4b03-b39e-8c62618f5a6f.jpeg?im_w=720", property5);
         imageRepository.save(image5_3);
 
-        Property property6 = new Property(host1, "Inverness", 45, "Lovely wooden bothy on a working croft, with views looking along the firth to Cromarty. Comfortable, well equipped, with cosy log burner.", PropertyType.LODGE);
+        Property property6 = new Property(host1, "Inverness", "IV19FA", 45, "Lovely wooden bothy on a working croft, with views looking along the firth to Cromarty. Comfortable, well equipped, with cosy log burner.", PropertyType.LODGE);
         propertyRepository.save(property6);
         Image image6_1 = new Image("https://a0.muscache.com/im/pictures/16fd05e4-1b74-44ab-8fb4-793f378bcd59.jpg?im_w=960", property6);
         imageRepository.save(image6_1);
@@ -106,7 +106,7 @@ public class DataLoader implements ApplicationRunner {
         Image image6_3 = new Image("https://a0.muscache.com/im/pictures/8b116b5d-ba7a-41c2-bcf7-e5349002cff7.jpg?im_w=1200", property6);
         imageRepository.save(image6_3);
 
-        Property property7 = new Property(host1, "Glasgow", 900, "A turreted castle in Glasgow city centre!! Six beautiful and luxurious bedroom suites, 5 roaring fireplaces and Rugby pitch in back garden.", PropertyType.MANSION);
+        Property property7 = new Property(host1, "Glasgow", "G432DS", 900, "A turreted castle in Glasgow city centre!! Six beautiful and luxurious bedroom suites, 5 roaring fireplaces and Rugby pitch in back garden.", PropertyType.MANSION);
         propertyRepository.save(property7);
         Image image7_1 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-52841116/original/407b37cb-1f5d-4566-9982-f7535c22ee20.jpeg?im_w=960", property7);
         imageRepository.save(image7_1);
@@ -115,7 +115,7 @@ public class DataLoader implements ApplicationRunner {
         Image image7_3 = new Image("https://a0.muscache.com/im/pictures/3abc29b2-895e-471e-b7d2-ed97bdd76b58.jpg?im_w=1200", property7);
         imageRepository.save(image7_3);
 
-        Property property8 = new Property(host1, "Perth", 450, "Number One Rosemount is an extremely unique detached house built in 2011 set within glorious mature gardens. This house is great for families looking for a holiday to remember.", PropertyType.MANSION);
+        Property property8 = new Property(host1, "Perth", "PH11DG", 450, "Number One Rosemount is an extremely unique detached house built in 2011 set within glorious mature gardens. This house is great for families looking for a holiday to remember.", PropertyType.MANSION);
         propertyRepository.save(property8);
         Image image8_1 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-51907131/original/7a486bca-f1b2-498e-a2e0-b1ddabc6ed0f.jpeg?im_w=1200", property8);
         imageRepository.save(image8_1);
@@ -124,7 +124,7 @@ public class DataLoader implements ApplicationRunner {
         Image image8_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-51907131/original/e8342ee2-cb35-496e-966d-a734cc98b324.jpeg?im_w=1200", property8);
         imageRepository.save(image8_3);
 
-        Property property9 = new Property(host1, "Perth", 70, "Stunning rural 2 bedroom cottage in the Perthshire Countryside. Perfect to get away from your busy life.", PropertyType.TWO_BED);
+        Property property9 = new Property(host1, "Perth", "PH11JL", 70, "Stunning rural 2 bedroom cottage in the Perthshire Countryside. Perfect to get away from your busy life.", PropertyType.TWO_BED);
         propertyRepository.save(property9);
         Image image9_1 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-50603897/original/d1b5ba09-72aa-49d2-9cd7-8a8d4ef391ca.jpeg?im_w=960", property9);
         imageRepository.save(image9_1);
@@ -133,7 +133,7 @@ public class DataLoader implements ApplicationRunner {
         Image image9_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-50603897/original/f129f06f-67be-484e-abc1-747d915e3d2f.jpeg?im_w=720", property9);
         imageRepository.save(image9_3);
 
-        Property property10 = new Property(host1, "Dundee", 100, "Take it easy at this unique and tranquil getaway. Stunning mountain views from a Juliette balcony.", PropertyType.THREE_BED);
+        Property property10 = new Property(host1, "Dundee", "DD11LH", 100, "Take it easy at this unique and tranquil getaway. Stunning mountain views from a Juliette balcony.", PropertyType.THREE_BED);
         propertyRepository.save(property10);
         Image image10_1 = new Image("https://a0.muscache.com/im/pictures/9a70f62b-decf-4b50-9a18-1dd7e4d672e2.jpg?im_w=960", property10);
         imageRepository.save(image10_1);
