@@ -51,6 +51,8 @@ const Card = styled.div`
     width: 35%;
 
     img{
-        border-radius: 1rem;
+        border-radius: 2rem;
+        width: 80%;
+        height: 70%;
     }
 `

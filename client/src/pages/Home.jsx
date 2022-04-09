@@ -14,8 +14,8 @@ function Home({properties, stateGuest, onCreate}) {
                 src="https://i.imgur.com/YtOrFVb.png"
                 alt="home-page-banner"
                 />
-            <GuestForm guest={stateGuest} onCreate={onCreate}/>
             </Card>
+            <GuestForm guest={stateGuest} onCreate={onCreate}/>
             <Featured properties={properties} />
             <Events />
         </div>
