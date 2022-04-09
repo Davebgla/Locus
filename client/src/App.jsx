@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Pages from './pages/Pages';
 import { BrowserRouter } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Navbar/>
       <Pages properties={properties}/>
       </BrowserRouter>
     </div>
