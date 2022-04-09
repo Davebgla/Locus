@@ -1,5 +1,6 @@
 import React from "react"
 import { useState, useEffect } from "react"
+import styled from "styled-components";
 
 const GuestForm = ({guest, bookings, onCreate, onUpdate}) => {
 
@@ -30,7 +31,7 @@ const GuestForm = ({guest, bookings, onCreate, onUpdate}) => {
 
             let heading = "";
             if(!guest){
-                heading = "Create user"
+                heading = "Create Account"
             } else{
                 heading = "Edit" + guest.email;
     }
@@ -57,9 +58,9 @@ const GuestForm = ({guest, bookings, onCreate, onUpdate}) => {
     }
 
     return (
-        <>
-        <h3>{heading}</h3>
+        <Wrapper>
         <form onSubmit={handleSubmit}>
+            <h3>Create Account</h3>
             <input type="text" placeholder="First Name" name="firstName" onChange={handleChange} value={stateGuest.firstName}/>
             <input type="text" placeholder="Last Name" name="lastName" onChange={handleChange} value={stateGuest.lastName}/>
             <input type="text" placeholder="Email" name="email" onChange={handleChange} value={stateGuest.email}/>
@@ -67,10 +68,53 @@ const GuestForm = ({guest, bookings, onCreate, onUpdate}) => {
             <button type="submit">Create</button>
 
         </form>
-        </>
+        </Wrapper>
     )
-
-
 }
+
+const Wrapper = styled.div`
+    
+    form{
+        background: white;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 20%;
+        padding: 20px 40px;
+        
+    }
+
+    h3{
+        margin-bottom: 40px;
+    }
+
+    input{
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    button{
+        background-color: #f9473a;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-family: sans-serif;
+        font-size: 14px;
+        margin: 20px 0px;
+        padding: 10px;
+    }
+
+    button:hover {
+        box-shadow: 0 5px 9px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+`
 
 export default GuestForm
