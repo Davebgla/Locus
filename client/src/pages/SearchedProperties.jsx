@@ -44,22 +44,12 @@ function SearchedProperties({properties}) {
 const Grid = styled.div`
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-grid-gap: 1rem;
+grid-gap: 3rem;
 `;
 
 const Card = styled.div`
 img{
-    width: 25%;
-    border-radius: 2rem;
-}
-
-p{
-    text-align: center;
-    padding: 1rem;
-}
-
-img{
-    width: 70%;
+    width: 100%;
     border-radius: 2rem;
 }
 a{
@@ -68,6 +58,7 @@ a{
 h4{
     text-align: center;
     padding: 1rem;
+    color: black;
 }
 `;
 
