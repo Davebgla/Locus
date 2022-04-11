@@ -8,6 +8,7 @@ function Home({properties, stateGuest, onCreate}) {
 
     return(
         <div className="home">
+            <GuestForm guest={stateGuest} onCreate={onCreate}/>
             <Card sx={{maxWidth: 1300, maxHeight: 700, margin: 0}}>
                 <CardMedia
                 component="img"
@@ -15,7 +16,6 @@ function Home({properties, stateGuest, onCreate}) {
                 alt="home-page-banner"
                 />
             </Card>
-            <GuestForm guest={stateGuest} onCreate={onCreate}/>
             <Featured properties={properties} />
             <Events />
         </div>
