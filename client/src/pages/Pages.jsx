@@ -1,21 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import GuestForm from '../components/GuestForm';
 import Home from './Home';
 import PropertyList from './PropertyList';
 import Property from './Property';
 import Request from '../helpers/Request';
+import SearchedProperties from './SearchedProperties';
 
-function Pages({properties}) {
 
-    const [guest, setGuest] = useState(	{
-		"id": 3,
-		"firstName": "Stan",
-		"lastName": "Tarnev",
-		"email": "stan@codeclan.com",
-		"contactNumber": "(987)-639-2345",
-		"rating": 1
-	});
+function Pages() {
+
+    const [properties, setProperties] = useState([]);
+    const [guest, setGuest] = useState({
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "contactNumber": "",
+        "rating": 0
+    });
+  
+    useEffect(() => {
+      getProperties();
+    }, []);
+  
+    const getProperties = async () => {
+      const api = await fetch('/api/properties');
+      const data = await api.json();
+      setProperties(data);
+    }
 
     const location = useLocation();
 
@@ -23,11 +34,8 @@ function Pages({properties}) {
         const request = new Request();
         const url = "/api/guests";
         request.post(url, guest)
-        .then(res => res.json())
-        .then((data) => {
-            setGuest(data)
-            // window.location = "/guests"
-        })
+        .then(response => response.json())
+        .then(data => setGuest(data))
       }
 
     const handleBookingSubmit = (booking) => {
@@ -35,7 +43,7 @@ function Pages({properties}) {
         const request = new Request();
         const url = "/api/bookings";
         request.postBooking(url, booking)
-        .then((res) => res.json())
+        .then(response => response.json())
         .then(data => console.log(data))
     }
     
@@ -53,9 +61,9 @@ function Pages({properties}) {
         <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home properties={properties} onCreate={handleSubmit}/>} />
             <Route path="/properties" element={<PropertyList properties={properties}/>} />
-            {/* <Route path="/properties/:id" element={<Property />} /> */}
             <Route exact path="/properties/:id" element={ <Property guest={guest} properties={properties} onCreateBooking={handleBookingSubmit}/>
             }/>
+            <Route path="/searched/:search" element={<SearchedProperties properties={properties}/>} />
         </Routes>
     )
 }
