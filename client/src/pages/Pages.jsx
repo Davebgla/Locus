@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import GuestForm from '../components/GuestForm';
 import Home from './Home';
-import PropertyList from './Properties';
+import PropertyList from './PropertyList';
 import Property from './Property';
 import Request from '../helpers/Request';
 

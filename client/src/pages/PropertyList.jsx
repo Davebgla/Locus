@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import {Button, Typography, Rating, Box, CardContent, CardMedia} from "@mui/material"
+import { Typography, Rating, Box, CardContent, CardMedia} from "@mui/material"
+import { Link } from "react-router-dom";
 
 
 function PropertyList({properties}){
@@ -23,7 +24,7 @@ function PropertyList({properties}){
                   <Typography component="legend">Host Rating</Typography>
                   <Rating name="read-only" value= {property.host["rating"]} readOnly />
                   <p>£ {property.pricePerNight} / per night</p>
-                  <Button a href={"/properties/" + property.id}>View</Button>
+                  <Link to={"/properties/" + property.id}>View</Link>
                 </CardContent>
               </Box>
             </Card>
