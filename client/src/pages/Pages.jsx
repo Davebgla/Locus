@@ -4,7 +4,8 @@ import Home from './Home';
 import PropertyList from './PropertyList';
 import Property from './Property';
 import Request from '../helpers/Request';
-import { getOptionGroupUnstyledUtilityClass } from '@mui/base';
+import SearchedProperties from './SearchedProperties';
+
 
 function Pages() {
 
@@ -62,6 +63,7 @@ function Pages() {
             <Route path="/properties" element={<PropertyList properties={properties}/>} />
             <Route exact path="/properties/:id" element={ <Property guest={guest} properties={properties} onCreateBooking={handleBookingSubmit}/>
             }/>
+            <Route path="/searched/:search" element={<SearchedProperties properties={properties}/>} />
         </Routes>
     )
 }
