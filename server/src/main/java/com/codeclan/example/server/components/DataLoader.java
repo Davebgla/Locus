@@ -242,7 +242,7 @@ public class DataLoader implements ApplicationRunner {
         imageRepository.save(image21_3);
 
         Property property22 = new Property(host3, "Inverness", "IV38PJ", 167, "This beautiful Scandinavian Finlodge with hot tub sits in a peaceful setting with stunning views over Leachkin", PropertyType.THREE_BED);
-        propertyRepository.save(property21);
+        propertyRepository.save(property22);
         Image image22_1 =new Image("https://a0.muscache.com/im/pictures/miso/Hosting-48600110/original/57c1b476-a70e-4653-9563-a060e8c85b04.jpeg?im_w=1200", property22);
         imageRepository.save(image22_1);
         Image image22_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-48600110/original/375c9bcf-3f07-4768-af5d-80aae6eca7cd.jpeg?im_w=720", property22);
@@ -250,14 +250,32 @@ public class DataLoader implements ApplicationRunner {
         Image image22_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-48600110/original/4425e78a-6832-423d-aeed-b946bb14a951.jpeg?im_w=720", property22);
         imageRepository.save(image22_3);
 
-        Property property23 = new Property(host3, "Stirling", "FK83SX", 125, "This property really does have the wow factor! Is a stunning contemporary refurbished cottage with its own enclosed private garden is a real hidden oasis", PropertyType.THREE_BED);
-        propertyRepository.save(property21);
+        Property property23 = new Property(host3, "Stirling", "FK83SX", 125, "This property really does have the wow factor! A stunning contemporary refurbished cottage with its own enclosed private garden is a real hidden oasis", PropertyType.THREE_BED);
+        propertyRepository.save(property23);
         Image image23_1 =new Image("https://a0.muscache.com/im/pictures/7f2a9544-283d-4e92-8217-80f81d7073f9.jpg?im_w=1200", property23);
         imageRepository.save(image23_1);
         Image image23_2 = new Image("https://a0.muscache.com/im/pictures/d6212515-1b8f-4885-b885-067c470a0456.jpg?im_w=1200", property23);
         imageRepository.save(image23_2);
         Image image23_3 = new Image("https://a0.muscache.com/im/pictures/ebe1a798-5e95-4896-a204-b5264c9c8fc6.jpg?im_w=720", property23);
         imageRepository.save(image23_3);
+
+        Property property24 = new Property(host3, "Bogbain", "IV25BD", 140, "The property offers a spacious king size bed room with ensuite, kitchen and diner, large garden patio access and an outdoor private hot tub.", PropertyType.THREE_BED);
+        propertyRepository.save(property24);
+        Image image24_1 =new Image("https://a0.muscache.com/im/pictures/05d24154-1fc1-4850-9ce5-5ff9fa82e959.jpg?im_w=1200", property24);
+        imageRepository.save(image24_1);
+        Image image24_2 = new Image("https://a0.muscache.com/im/pictures/a37f635f-3e0f-4ef0-867b-13e555236bed.jpg?im_w=1200", property24);
+        imageRepository.save(image24_2);
+        Image image24_3 = new Image("https://a0.muscache.com/im/pictures/9ea916ea-4ca9-421b-bbcd-150bd4da51a6.jpg?im_w=1440", property24);
+        imageRepository.save(image24_3);
+
+        Property property25 = new Property(host3, "Monzie", "PH74HE", 170, "The cottage is very comfortable for two people looking to relax and either be as active or as relaxed as they like", PropertyType.TWO_BED);
+        propertyRepository.save(property25);
+        Image image25_1 =new Image("https://a0.muscache.com/im/pictures/miso/Hosting-4044962/original/ad4a5647-cbd7-48d7-8c2c-e5e9d841356c.jpeg?im_w=1200", property25);
+        imageRepository.save(image25_1);
+        Image image25_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-4044962/original/62bdf641-88d5-4dda-9dd0-99a5c1d3a5c3.jpeg?im_w=720", property25);
+        imageRepository.save(image25_2);
+        Image image25_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-4044962/original/45e11af0-8b0b-486b-89c5-5c4a8bfa6a74.jpeg?im_w=720", property25);
+        imageRepository.save(image25_3);
 
         Booking booking1 = new Booking(guest1, property1, 2, 1);
         bookingRepository.save(booking1);
