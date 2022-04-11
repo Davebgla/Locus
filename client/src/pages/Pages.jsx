@@ -1,14 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import GuestForm from '../components/GuestForm';
 import Home from './Home';
 import PropertyList from './Properties';
 import Property from './Property';
 import Request from '../helpers/Request';
 import SearchedProperties from './SearchedProperties';
 
-function Pages({properties}) {
+function Pages() {
 
+    const [properties, setProperties] = useState([]);
+  
+    useEffect(() => {
+      getProperties();
+    }, []);
+  
+    const getProperties = async () => {
+  
+      const api = await fetch('/api/properties');
+      const data = await api.json();
+  
+      setProperties(data);
+    }
+  
     const [guest, setGuest] = useState(	{
 		"id": 3,
 		"firstName": "Stan",
