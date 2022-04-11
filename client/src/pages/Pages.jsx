@@ -4,6 +4,7 @@ import Home from './Home';
 import PropertyList from './Properties';
 import Property from './Property';
 import Request from '../helpers/Request';
+import SearchedProperties from './SearchedProperties';
 
 function Pages() {
 
@@ -69,6 +70,7 @@ function Pages() {
             {/* <Route path="/properties/:id" element={<Property />} /> */}
             <Route exact path="/properties/:id" element={ <Property guest={guest} properties={properties} onCreateBooking={handleBookingSubmit}/>
             }/>
+            <Route path="/searched/:search" element={<SearchedProperties properties={properties}/>} />
         </Routes>
     )
 }
