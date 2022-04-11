@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Pages from './pages/Pages';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Search from './components/Search';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Navbar/>
+      <Search/>
       <Pages properties={properties}/>
       </BrowserRouter>
     </div>
