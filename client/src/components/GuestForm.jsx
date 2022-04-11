@@ -54,8 +54,8 @@ const Wrapper = styled.div`
         justify-content: space-around;
         margin: 0 auto;
         width: 20%;
-        padding: 20px 40px;
-        
+        padding: 5px 18px;
+        float: right;  
     }
 
     h3{
@@ -79,7 +79,7 @@ const Wrapper = styled.div`
         color: white;
         font-family: sans-serif;
         font-size: 14px;
-        margin: 20px 0px;
+        margin: 10px 0px;
         padding: 10px;
     }
 

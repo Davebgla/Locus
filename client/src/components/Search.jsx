@@ -30,8 +30,9 @@ function Search() {
 const FormStyle = styled.form`
     margin: 0rem 20rem;
         div{
-            width: 80%;
+            width: 50%;
             position: relative;
+            margin-left: 17%;
         }
     input{
         border: none;
