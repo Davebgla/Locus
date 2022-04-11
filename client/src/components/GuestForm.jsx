@@ -1,72 +1,43 @@
 import React from "react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import styled from "styled-components";
 
-const GuestForm = ({guest, bookings, onCreate, onUpdate}) => {
+const GuestForm = ({onCreate}) => {
 
-    const [stateGuest, setGuest] = useState ({
-        
+    const [guest, setGuest] = useState ({
         firstName: "",
         lastName: "",
         email: "",
         contactNumber: ""
     })
-    
-
-    useEffect(() => {
-         if(guest){
-                let copiedGuest = {...guest};
-                setGuest(copiedGuest);
-            }
-    }, [guest])
-
-    const findBookingIndex = () => {
-            if(guest){
-                return bookings.findIndex((booking) => {
-                    return guest.booking.id === booking.id;
-                })
-            }else{
-                return null}
-            }
-
-            let heading = "";
-            if(!guest){
-                heading = "Create Account"
-            } else{
-                heading = "Edit" + guest.email;
-    }
 
     const handleSubmit = (event) => {
-                event.preventDefault();
-                onCreate(stateGuest);
-                
+        event.preventDefault();
+        onCreate(guest);    
+        setGuest({
+            firstName: "",
+            lastName: "",
+            email: "",
+            contactNumber: ""
+        })    
     }
 
     const handleChange = (event) => {
-                let propertyName = event.target.name;
-                let copiedGuest = {...stateGuest};
-                copiedGuest[propertyName] = event.target.value;
-                setGuest(copiedGuest)
-    }
-
-    const handleBooking = (event) => {
-                const index = parseInt(event.target.value);
-                const selectedBooking = bookings[index];
-                let copiedGuest = {...stateGuest};
-                copiedGuest["booking"] = selectedBooking;
-                setGuest(copiedGuest);
+        let propertyName = event.target.name;
+        let copiedGuest = {...guest};
+        copiedGuest[propertyName] = event.target.value;
+        setGuest(copiedGuest);
     }
 
     return (
         <Wrapper>
         <form onSubmit={handleSubmit}>
             <h3>Create Account</h3>
-            <input type="text" placeholder="First Name" name="firstName" onChange={handleChange} value={stateGuest.firstName}/>
-            <input type="text" placeholder="Last Name" name="lastName" onChange={handleChange} value={stateGuest.lastName}/>
-            <input type="text" placeholder="Email" name="email" onChange={handleChange} value={stateGuest.email}/>
-            <input type="text" placeholder="Contact Number" name="contactNumber" onChange={handleChange} value={stateGuest.contactNumber}/>
+            <input type="text" placeholder="First Name" name="firstName" onChange={handleChange} value={guest.firstName}/>
+            <input type="text" placeholder="Last Name" name="lastName" onChange={handleChange} value={guest.lastName}/>
+            <input type="text" placeholder="Email" name="email" onChange={handleChange} value={guest.email}/>
+            <input type="text" placeholder="Contact Number" name="contactNumber" onChange={handleChange} value={guest.contactNumber}/>
             <button type="submit">Create</button>
-
         </form>
         </Wrapper>
     )

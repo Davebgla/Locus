@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Button, Typography, Rating} from "@mui/material"
+import { Link } from "react-router-dom";
 
 
 function PropertyList({properties}){
@@ -16,7 +17,7 @@ function PropertyList({properties}){
                     <p>£ {property.pricePerNight} / per night</p>
                     <Typography component="legend">Host Rating</Typography>
                     <Rating name="read-only" value={property.host["rating"]}readOnly />
-                    <Button a href={"/properties/" + property.id}>Book</Button>
+                    <Link to={"/properties/" + property.id}>Book</Link>
                 </Card>
             </Wrapper>
         )
