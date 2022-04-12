@@ -18,6 +18,15 @@ code {
   text-align: center;
 }
 
+ul{
+  list-style-type: none;
+}
+
+li{
+  display: inline;
+  margin-left: 5rem;
+}
+
 .leaflet-container{
   width: 500px;
   height: 500px;
@@ -27,3 +36,4 @@ code {
 .booking {
   font-family: 'Roboto', sans-serif;
 }
+
