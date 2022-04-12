@@ -105,6 +105,7 @@ const FormWrapper = styled.div`
         justify-content: space-around;
         margin: 0 auto;
         margin-top: 1rem;
+        margin-bottom: 1rem;
         left: 65%;
         top: 20%;
         width: 20%;
@@ -146,6 +147,7 @@ const IconContainer = styled.div`
 const TextContainer = styled.div`
     float: left;
     text-align: left;
+    max-width: 70%;
 `;
 
 const Wrapper = styled.div`
@@ -158,6 +160,8 @@ const Card = styled.div`
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
+    margin-bottom: 1rem;    
+    
 
     img{
         border-radius: 2rem;
