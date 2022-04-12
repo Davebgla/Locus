@@ -56,7 +56,7 @@ const FormStyle = styled.form`
     margin: 0rem 20rem;
 
     div{
-        width: 100%;
+        width: 150%;
         position: relative;
         top: 22px;
 
@@ -70,7 +70,7 @@ const FormStyle = styled.form`
         border-radius: 1rem;
         border: none;
         outline: none;
-        width: 200%;
+        width: 100%;
         margin-bottom: 3rem;
     }
     svg{
