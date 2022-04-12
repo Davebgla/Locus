@@ -295,6 +295,15 @@ public class DataLoader implements ApplicationRunner {
         Image image27_3 = new Image("https://a0.muscache.com/im/pictures/09ad4c33-1884-4332-ba11-8cd0b1f8bd82.jpg?im_w=1200", property27);
         imageRepository.save(image27_3);
 
+        Property property28 = new Property(host3, "Kingscavil", "EH496NA", 150, "This lovely home offers 2 king size bedrooms and one bathroom with your own private living room and private entrance.", PropertyType.TWO_BED);
+        propertyRepository.save(property28);
+        Image image28_1 =new Image("https://a0.muscache.com/im/pictures/e9620caf-7d71-428c-9b39-4b4d6bcc2957.jpg?im_w=1200", property28);
+        imageRepository.save(image28_1);
+        Image image28_2 = new Image("https://a0.muscache.com/im/pictures/9c48fdd1-6d82-499f-9aa4-4a900fa0d72b.jpg?im_w=720", property28);
+        imageRepository.save(image28_2);
+        Image image28_3 = new Image("https://a0.muscache.com/im/pictures/cb220c03-36de-44d0-96a6-6e5fc6933ce2.jpg?im_w=720", property28);
+        imageRepository.save(image28_3);
+
 
 
 
