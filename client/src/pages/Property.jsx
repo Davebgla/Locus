@@ -30,10 +30,11 @@ function Property({guest, properties, onCreateBooking}){
             })
         )}
     return(
+        <div className='property'>
+        {property &&
         <Wrapper>
-       {property &&
             <Card>
-                                    <Splide options = {{
+                    <Splide options = {{
                             perPage: 1,
                             pagination: false,
                             drag: "free",
@@ -84,9 +85,10 @@ function Property({guest, properties, onCreateBooking}){
                     <BookingForm guest={guest} property={property} onCreateBooking={onCreateBooking} />
                     </FormWrapper>
             </Card>
-                    <MapBox property={property} />
-        }
+            <MapBox property={property} />
         </Wrapper>
+        }
+        </div>
     )
 }
 
