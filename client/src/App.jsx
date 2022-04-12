@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Request from './helpers/Request';
 import Pages from './pages/Pages';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -80,6 +81,7 @@ function App() {
       <Router>
         <Navbar booking={booking} />
         <Pages guest={guest} properties={properties} handleSubmit={handleSubmit} handleBookingSubmit={handleBookingSubmit} booking={booking} deleteBooking={deleteBooking} updateBooking={updateBooking} />
+        <Footer/>
       </Router>
     </div>
   );
