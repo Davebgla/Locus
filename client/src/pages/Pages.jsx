@@ -6,7 +6,7 @@ import SearchedProperties from './SearchedProperties';
 import Booking from './Booking';
 
 
-function Pages({guest, properties, handleSubmit, handleBookingSubmit, booking}) {
+function Pages({guest, properties, handleSubmit, handleBookingSubmit, booking, deleteBooking, updateBooking}) {
 
     const location = useLocation();
 
@@ -16,7 +16,7 @@ function Pages({guest, properties, handleSubmit, handleBookingSubmit, booking}) 
             <Route path="/properties" element={<PropertyList properties={properties}/>} />
             <Route exact path="/properties/:id" element={ <Property guest={guest} properties={properties} onCreateBooking={handleBookingSubmit}/>
             }/>
-            <Route exact path="/bookings/:id" element={ <Booking booking={booking} />
+            <Route exact path="/bookings/:id" element={ <Booking booking={booking} deleteBooking={deleteBooking} updateBooking={updateBooking} />
             }/>
             <Route path="/searched/:search" element={<SearchedProperties properties={properties}/>} />
         </Routes>

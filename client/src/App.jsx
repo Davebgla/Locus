@@ -59,12 +59,26 @@ function App() {
       window.location = "/";
   }
 
+  const updateBooking = (booking) => {
+    console.log(booking)
+    const request = new Request();
+    const url = "/api/bookings/" + booking.id;
+    request.patch(url, booking)
+    .then(window.location = "/");
+  }
+
+  const deleteBooking = (id) => {
+      const request = new Request();
+      const url = "/api/bookings/";
+      request.delete(url, id)
+      window.location = "/"
+  }
+
   return (
     <div className="App">
       <Router>
         <Navbar booking={booking} />
-        <Search />
-        <Pages guest={guest} properties={properties} handleSubmit={handleSubmit} handleBookingSubmit={handleBookingSubmit} booking={booking} />
+        <Pages guest={guest} properties={properties} handleSubmit={handleSubmit} handleBookingSubmit={handleBookingSubmit} booking={booking} deleteBooking={deleteBooking} updateBooking={updateBooking} />
       </Router>
     </div>
   );
