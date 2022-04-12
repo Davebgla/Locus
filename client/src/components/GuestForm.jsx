@@ -58,7 +58,8 @@ const Wrapper = styled.div`
         left: 65%;
         top: 28%;
         width: 20%;
-        padding: 25px 35px; 
+        padding: 25px 35px;
+        box-shadow: 0px 2px 10px rgb(153, 151, 151);
     }
 
     h3{
