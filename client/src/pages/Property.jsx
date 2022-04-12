@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import styled from "styled-components";
 import {Button, Typography, Rating} from "@mui/material"
 import BookingForm from '../components/BookingForm';
+import MapBox from '../components/MapBox';
 
 function Property({guest, properties, onCreateBooking}){
 
@@ -42,7 +43,7 @@ function Property({guest, properties, onCreateBooking}){
                     <Rating name="read-only" value={property.host["rating"]}readOnly />
                     <br/>
                     <BookingForm guest={guest} property={property} onCreateBooking={onCreateBooking} />
-                    {/* <Button a href={"/properties/" + property.id}>Book</Button> */}
+                    <MapBox property={property} />
             </Wrapper>
         }
         </div>

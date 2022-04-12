@@ -17,3 +17,9 @@ code {
 .App{
   text-align: center;
 }
+
+.leaflet-container{
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
