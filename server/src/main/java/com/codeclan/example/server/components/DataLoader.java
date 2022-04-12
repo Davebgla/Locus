@@ -268,6 +268,15 @@ public class DataLoader implements ApplicationRunner {
         Image image24_3 = new Image("https://a0.muscache.com/im/pictures/9ea916ea-4ca9-421b-bbcd-150bd4da51a6.jpg?im_w=1440", property24);
         imageRepository.save(image24_3);
 
+        Property property25 = new Property(host3, "Monzie", "PH74HE", 170, "The cottage is very comfortable for two people looking to relax and either be as active or as relaxed as they like", PropertyType.TWO_BED);
+        propertyRepository.save(property25);
+        Image image25_1 =new Image("https://a0.muscache.com/im/pictures/miso/Hosting-4044962/original/ad4a5647-cbd7-48d7-8c2c-e5e9d841356c.jpeg?im_w=1200", property25);
+        imageRepository.save(image25_1);
+        Image image25_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-4044962/original/62bdf641-88d5-4dda-9dd0-99a5c1d3a5c3.jpeg?im_w=720", property25);
+        imageRepository.save(image25_2);
+        Image image25_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-4044962/original/45e11af0-8b0b-486b-89c5-5c4a8bfa6a74.jpeg?im_w=720", property25);
+        imageRepository.save(image25_3);
+
 
       
         Booking booking1 = new Booking(guest1, property1, 2, 1);
