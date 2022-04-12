@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 10% 0%;
+  margin: 10% 0% 0% 0%;
   
 }
 
@@ -22,4 +22,8 @@ code {
   width: 500px;
   height: 500px;
   border: 1px solid black;
+}
+
+.booking {
+  font-family: 'Roboto', sans-serif;
 }
