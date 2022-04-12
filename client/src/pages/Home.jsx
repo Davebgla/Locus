@@ -9,7 +9,7 @@ function Home({properties, stateGuest, onCreate}) {
     return(
         <div className="home">
             <GuestForm guest={stateGuest} onCreate={onCreate}/>
-            <Card sx={{maxWidth: 1300, maxHeight: 700, margin: 0}}>
+            <Card sx={{maxWidth: 1500, maxHeight: 700, margin: 0}}>
                 <CardMedia
                 component="img"
                 src="https://i.imgur.com/t0azK89.png"
