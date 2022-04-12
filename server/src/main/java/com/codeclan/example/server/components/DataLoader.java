@@ -340,6 +340,15 @@ public class DataLoader implements ApplicationRunner {
         Image image32_3 = new Image("https://a0.muscache.com/im/pictures/a391f5be-db7e-464b-aad0-a2265ac6665f.jpg?im_w=1440", property32);
         imageRepository.save(image32_3);
 
+        Property property33 = new Property(host3, "Glasgow", "G25LD", 108, "Enjoy the rarity of having a private free parking space so close to the centre of Glasgow.", PropertyType.TWO_BED);
+        propertyRepository.save(property33);
+        Image image33_1 =new Image("https://a0.muscache.com/im/pictures/3f139479-09e8-4b77-b93e-fb185809af66.jpg?im_w=1200", property33);
+        imageRepository.save(image33_1);
+        Image image33_2 = new Image("https://a0.muscache.com/im/pictures/2d413dca-59ff-4582-b124-e3f9cb800225.jpg?im_w=1200", property33);
+        imageRepository.save(image33_2);
+        Image image33_3 = new Image("https://a0.muscache.com/im/pictures/76f0826d-27f8-40f2-9db2-80d18013b8c8.jpg?im_w=1200", property33);
+        imageRepository.save(image33_3);
+
 
 
 
