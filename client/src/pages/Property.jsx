@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import styled from "styled-components";
-import {Button, Typography, Rating} from "@mui/material"
+import {Typography, Rating, } from "@mui/material"
 import BookingForm from '../components/BookingForm';
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+
 
 function Property({guest, properties, onCreateBooking}){
 
@@ -27,33 +29,76 @@ function Property({guest, properties, onCreateBooking}){
             })
         )}
     return(
-        <div className='property'>
+        <Wrapper>
        {property &&
-            <Wrapper>
-                    <h3>City: {property.location}</h3>
-                    <h3>Property Description: {property.description}</h3>
-                    <h3>Host Name: {property.host["firstName"]}</h3>
-                    <Typography component="legend"/>
-                    <img src={property.images[0].url} width="300" height="300"/>
-                    <img src={property.images[1].url} width="300" height="300"/>
-                    <img src={property.images[2].url} width="300" height="300"/>
+            <Card>
+                                    <Splide options = {{
+                            perPage: 1,
+                            pagination: false,
+                            drag: "free",
+                            gap: "2rem"
+                        }}>
+                            {property.images.map((image, index) => {
+                                return(
+                                    <SplideSlide key={index}>
+                                        <Card>
+                                                <img src={image.url} />
+                                        </Card>
+                                    </SplideSlide>
+                                )
+                            })}
+                        </Splide>
+                        
+                    <h3>Location: {property.location}</h3>
+
+                    <p>{property.description}</p>
+
+                    <h4>Your host is:</h4>
+                    <p>{property.host["firstName"]}</p>
+                    <Rating name="read-only" value={property.host["rating"]}readOnly />
+
                     <p>£ {property.pricePerNight} / per night</p>
                     <Typography component="legend">Host Rating</Typography>
-                    <Rating name="read-only" value={property.host["rating"]}readOnly />
                     <br/>
                     <BookingForm guest={guest} property={property} onCreateBooking={onCreateBooking} />
-                    {/* <Button a href={"/properties/" + property.id}>Book</Button> */}
-            </Wrapper>
+            </Card>
         }
-        </div>
+        </Wrapper>
     )
 }
 
-const Wrapper = styled.div`
-    margin: 4rem 0rem;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
-`;
 
 export default Property;
+
+const Wrapper = styled.div`
+    /* margin: 4rem 0rem; */
+    margin: 5% 10%;
+`;
+
+const Card = styled.div`
+    min-height: 30rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+
+    img{
+        border-radius: 2rem;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+`;
+
+const Gradient = styled.div`
+        z-index: 3;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+        &:hover {
+            opacity: 0;
+    }
+`;
+
