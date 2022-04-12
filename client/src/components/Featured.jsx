@@ -57,7 +57,6 @@ const Card = styled.div`
         object-fit: cover;
     }
 
-
     p{
         position: absolute;
         z-index: 10;

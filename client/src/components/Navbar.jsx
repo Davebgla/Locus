@@ -16,6 +16,7 @@ function Navbar({booking}) {
   const submitHandler = (e) => {
       e.preventDefault();
       navigate('/searched/' + input)
+      setInput("")
   };
 
   return (
@@ -56,7 +57,7 @@ const FormStyle = styled.form`
     margin: 0rem 20rem;
 
     div{
-        width: 150%;
+        width: 170%;
         position: relative;
         top: 22px;
 
