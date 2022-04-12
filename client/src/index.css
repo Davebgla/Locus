@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 10% 0%;
+  /* background-color: #a0a0a0; */
   
 }
 
@@ -16,4 +17,13 @@ code {
 
 .App{
   text-align: center;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  display: inline;
+  margin-left: 5rem;
 }

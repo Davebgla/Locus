@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {Typography, Rating, } from "@mui/material"
 import BookingForm from '../components/BookingForm';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { GiShower, GiWifiRouter, GiKnifeFork, GiBed, GiWaterDrop, GiThermometerHot } from "react-icons/gi";
 
 
 function Property({guest, properties, onCreateBooking}){
@@ -48,7 +49,8 @@ function Property({guest, properties, onCreateBooking}){
                                 )
                             })}
                         </Splide>
-                        
+                    <TextContainer>
+
                     <h3>Location: {property.location}</h3>
 
                     <p>{property.description}</p>
@@ -58,24 +60,97 @@ function Property({guest, properties, onCreateBooking}){
                     <Rating name="read-only" value={property.host["rating"]}readOnly />
 
                     <p>£ {property.pricePerNight} / per night</p>
-                    <Typography component="legend">Host Rating</Typography>
-                    <br/>
+                    <IconContainer>
+                    <h5>Available at this property:</h5>
+                    <ul>
+                        <li><GiShower style={{marginLeft: -110}} size={30}/></li>
+
+                        <li><GiWifiRouter size={30}/></li>
+
+                        <li><GiKnifeFork size={30}/></li>
+
+                        <li><GiBed size={30}/></li>
+
+                        <li><GiWaterDrop size={30}/></li>
+
+                        <li><GiThermometerHot size={30}/></li>
+
+                    </ul>
+                    </IconContainer>
+                    </TextContainer>
+
+
+                    <FormWrapper>
                     <BookingForm guest={guest} property={property} onCreateBooking={onCreateBooking} />
+                    </FormWrapper>
             </Card>
         }
         </Wrapper>
     )
 }
 
-
 export default Property;
 
+const FormWrapper = styled.div`
+    
+    form{
+        background: white;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 auto;
+        margin-top: 1rem;
+        left: 65%;
+        top: 20%;
+        width: 20%;
+        padding: 25px 35px;  
+        box-shadow: 0px 2px 10px rgb(153, 151, 151);
+        
+    }
+
+    input{
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    button{
+        background-color: #f9473a;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-family: sans-serif;
+        font-size: 14px;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+
+    button:hover {
+        box-shadow: 0 5px 9px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+`
+
+const IconContainer = styled.div`
+    display: inline;
+`;
+
+const TextContainer = styled.div`
+    float: left;
+    text-align: left;
+`;
+
 const Wrapper = styled.div`
-    /* margin: 4rem 0rem; */
-    margin: 5% 10%;
+    margin: 10% 10%;
 `;
 
 const Card = styled.div`
+    
     min-height: 30rem;
     border-radius: 2rem;
     overflow: hidden;
