@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 10% 0%;
+  margin: 10% 0% 0% 0%;
   
 }
 
@@ -17,3 +17,23 @@ code {
 .App{
   text-align: center;
 }
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  display: inline;
+  margin-left: 5rem;
+}
+
+.leaflet-container{
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+.booking {
+  font-family: 'Roboto', sans-serif;
+}
+

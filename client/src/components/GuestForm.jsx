@@ -56,7 +56,7 @@ const Wrapper = styled.div`
         justify-content: space-around;
         margin: 0 auto;
         left: 65%;
-        top: 28%;
+        top: 20%;
         width: 20%;
         padding: 25px 35px;
         box-shadow: 0px 2px 10px rgb(153, 151, 151);

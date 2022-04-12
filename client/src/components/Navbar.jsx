@@ -43,12 +43,15 @@ function Navbar({booking}) {
   )
 }
 
+
+
 const StyledLink = styled(Link)`
       color: #f9473a;
       text-decoration: none;
       margin: 1rem;
       position: relative;
       top: 22px;
+      :hover: {color: "black"}
 `
 
 

@@ -24,7 +24,7 @@ function PropertyList({properties}){
                   <Typography component="legend">Host Rating</Typography>
                   <Rating name="read-only" value= {property.host["rating"]} readOnly />
                   <p>£ {property.pricePerNight} / per night</p>
-                  <Link to={"/properties/" + property.id}>View</Link>
+                  <StyledLink to={"/properties/" + property.id}>View</StyledLink>
                 </CardContent>
               </Box>
             </Card>
@@ -43,6 +43,24 @@ function PropertyList({properties}){
 
 export default PropertyList;
 
+const StyledLink = styled(Link)`
+  display: inline-block;
+  font-size: 1em;
+  background: #f9473a;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  border-radius: 20px;
+  :hover{
+    letter-spacing: 5px;
+  }
+`
+
+
 const Wrapper = styled.div`
     margin: 4rem 0rem;
     display: flex;
@@ -55,6 +73,7 @@ const Card = styled.div`
     box-shadow: 0px 2px 10px rgb(68, 67, 67);
     padding: 15px;
     display: flex;
+    text-decoration: none;
     /* flex-direction: column;
     justify-content: space-around; */
     /* align-items: center;
