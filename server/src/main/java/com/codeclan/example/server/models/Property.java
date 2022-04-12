@@ -91,11 +91,11 @@ public class Property {
         this.host = host;
     }
 
-    public String getCity() {
+    public String getLocation() {
         return location;
     }
 
-    public void setCity(String address) {
+    public void setLocation(String location) {
         this.location = location;
     }
 

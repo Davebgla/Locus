@@ -39,14 +39,14 @@ class ServerApplicationTests {
 		guestRepository.save(guest1);
 	}
 
-	@Test
-	public void canDeleteProperty(){
-		Host host1 = new Host("Boris", "Johnson", "bj@?????.co.uk", "908070605", 3);
-		hostRepository.save(host1);
-		Property property2 = new Property(host1, "No. 11", 420, "The chancellor's digs", PropertyType.THREE_BED);
-		propertyRepository.save(property2);
-		propertyRepository.deleteById(property2.getId());
-		assertEquals(1, propertyRepository.findAll().size());
-	}
+//	@Test
+//	public void canDeleteProperty(){
+//		Host host1 = new Host("Boris", "Johnson", "bj@?????.co.uk", "908070605", 3);
+//		hostRepository.save(host1);
+//		Property property2 = new Property(host1, "No. 11", 420, "The chancellor's digs", PropertyType.THREE_BED);
+//		propertyRepository.save(property2);
+//		propertyRepository.deleteById(property2.getId());
+//		assertEquals(1, propertyRepository.findAll().size());
+//	}
 
 }

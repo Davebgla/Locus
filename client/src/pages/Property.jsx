@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import styled from "styled-components";
 import {Button, Typography, Rating} from "@mui/material"
+import BookingForm from '../components/BookingForm';
 
-function Property({properties}){
+function Property({guest, properties, onCreateBooking}){
 
     let params = useParams()
     const [property, setProperty] = useState(null)
@@ -29,7 +30,7 @@ function Property({properties}){
         <div className='property'>
        {property &&
             <Wrapper>
-                    <h3>City: {property.city}</h3>
+                    <h3>City: {property.location}</h3>
                     <h3>Property Description: {property.description}</h3>
                     <h3>Host Name: {property.host["firstName"]}</h3>
                     <Typography component="legend"/>
@@ -40,7 +41,8 @@ function Property({properties}){
                     <Typography component="legend">Host Rating</Typography>
                     <Rating name="read-only" value={property.host["rating"]}readOnly />
                     <br/>
-                    <Button a href={"/properties/" + property.id}>Book</Button>
+                    <BookingForm guest={guest} property={property} onCreateBooking={onCreateBooking} />
+                    {/* <Button a href={"/properties/" + property.id}>Book</Button> */}
             </Wrapper>
         }
         </div>

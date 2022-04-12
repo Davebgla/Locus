@@ -23,7 +23,7 @@ function Featured({properties}) {
                         <SplideSlide key={property.id}>
                             <Card>
                                 <Link to={"/properties/" + property.id}>
-                                    <p>{property.city}</p>
+                                    <p>{property.location}</p>
                                     <img src={property.images[0].url} width="300" height="200"/>
                                     <Gradient />
                                 </Link>
@@ -38,7 +38,8 @@ function Featured({properties}) {
 }
 
 const Wrapper = styled.div`
-    margin: 4rem 0rem;
+    /* margin: 4rem 0rem; */
+    margin: 10% 10%;
 `;
 
 const Card = styled.div`
@@ -80,7 +81,9 @@ const Gradient = styled.div`
         width: 100%;
         height: 100%;
         background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
-
+        &:hover {
+            opacity: 0;
+    }
 `;
 
 export default Featured;
