@@ -51,7 +51,7 @@ function Events(){
 
 const Wrapper = styled.div`
     margin: 4rem 0rem;
-    margin: 10% 10%;
+    margin: 5% 10%;
 `;
 
 const Card = styled.div`
