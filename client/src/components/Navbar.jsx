@@ -7,7 +7,7 @@ import {FaSearch} from 'react-icons/fa';
 import {useNavigate} from 'react-router-dom';
 
 
-function Navbar() {
+function Navbar({booking}) {
 
   const [input, setInput] = useState("");
   const navigate = useNavigate();
@@ -16,6 +16,7 @@ function Navbar() {
       e.preventDefault();
       navigate('/searched/' + input)
   };
+
   return (
       <>
         <AppBar>
@@ -32,7 +33,7 @@ function Navbar() {
                   </FormStyle>
                     <Tab href="/" sx={{color: "#f9473a"}} label="Home"/>
                     <Link to="/properties">Properties</Link>
-                    <Tab sx={{color: "#f9473a"}} label="Bookings"/>
+                    <Link to={"/bookings/" + booking.id}>Manage Booking</Link>
                 </Tabs>
             </Toolbar>
         </AppBar>
