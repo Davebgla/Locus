@@ -304,6 +304,24 @@ public class DataLoader implements ApplicationRunner {
         Image image28_3 = new Image("https://a0.muscache.com/im/pictures/cb220c03-36de-44d0-96a6-6e5fc6933ce2.jpg?im_w=720", property28);
         imageRepository.save(image28_3);
 
+        Property property29 = new Property(host3, "Bonnington", "EH278EQ", 200, "The property has underfloor heating, parking and views looking onto a golf green and beautiful fairway and courtyard space.", PropertyType.TWO_BED);
+        propertyRepository.save(property29);
+        Image image29_1 =new Image("https://a0.muscache.com/im/pictures/e6046e36-100b-4817-b8f1-a30cb2df7c3a.jpg?im_w=1200", property29);
+        imageRepository.save(image29_1);
+        Image image29_2 = new Image("https://a0.muscache.com/im/pictures/11de790b-7858-4bdf-8469-18484eb8e79f.jpg?im_w=720", property29);
+        imageRepository.save(image29_2);
+        Image image29_3 = new Image("https://a0.muscache.com/im/pictures/2d879ca3-500a-4c2c-a620-35956a66a02e.jpg?im_w=720", property29);
+        imageRepository.save(image29_3);
+
+        Property property30 = new Property(host3, "Longniddry", "EH320PH", 100, "Great for family getaways, business & golfing trips or even just a couples break.", PropertyType.THREE_BED);
+        propertyRepository.save(property30);
+        Image image30_1 =new Image("https://a0.muscache.com/im/pictures/af300718-07fd-4f55-84ee-86f116c91124.jpg?im_w=720", property30);
+        imageRepository.save(image30_1);
+        Image image30_2 = new Image("https://a0.muscache.com/im/pictures/edb79508-c5fd-42e9-95ac-d3901c6018c2.jpg?im_w=1200", property30);
+        imageRepository.save(image30_2);
+        Image image30_3 = new Image("https://a0.muscache.com/im/pictures/3da44da2-3c02-414e-adf8-de4b1441e2f5.jpg?im_w=720", property30);
+        imageRepository.save(image30_3);
+
 
 
 
