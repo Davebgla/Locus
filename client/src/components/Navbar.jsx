@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import {AppBar, Tab, Tabs, Toolbar, Typography} from "@mui/material";
 
-function Navbar() {
+function Navbar({booking}) {
   return (
       <>
         <AppBar>
@@ -11,7 +11,7 @@ function Navbar() {
                 <Tabs sx={{marginLeft: "auto"}}>
                     <Tab href="/" sx={{color: "#f9473a"}} label="Home"/>
                     <Link to="/properties">Properties</Link>
-                    <Tab sx={{color: "#f9473a"}} label="Bookings"/>
+                    <Link to={"/bookings/" + booking.id}>Manage Booking</Link>
                 </Tabs>
             </Toolbar>
         </AppBar>
