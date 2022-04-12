@@ -286,6 +286,26 @@ public class DataLoader implements ApplicationRunner {
         Image image26_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-48793902/original/d5b7cc51-2cfa-4d14-a9eb-33390ea6b75a.jpeg?im_w=720", property26);
         imageRepository.save(image26_3);
 
+        Property property27 = new Property(host3, "Nine Mile Burn", "EH269LS", 110, "These beautiful tents offer all the fun and adventure of living in the great outdoors and sleeping under canvas without giving up those home comforts. ", PropertyType.ONE_BED);
+        propertyRepository.save(property27);
+        Image image27_1 =new Image("https://a0.muscache.com/im/pictures/e38585f0-c019-4f8c-9b1c-dec5daacfae6.jpg?im_w=1200", property27);
+        imageRepository.save(image27_1);
+        Image image27_2 = new Image("https://a0.muscache.com/im/pictures/db15c490-a5c2-4576-b3ee-a822fa5fa7fb.jpg?im_w=720", property27);
+        imageRepository.save(image27_2);
+        Image image27_3 = new Image("https://a0.muscache.com/im/pictures/09ad4c33-1884-4332-ba11-8cd0b1f8bd82.jpg?im_w=1200", property27);
+        imageRepository.save(image27_3);
+
+        Property property28 = new Property(host3, "Nine Mile Burn", "EH269LS", 110, "These beautiful tents offer all the fun and adventure of living in the great outdoors and sleeping under canvas without giving up those home comforts. ", PropertyType.ONE_BED);
+        propertyRepository.save(property28);
+        Image image28_1 =new Image("https://a0.muscache.com/im/pictures/e38585f0-c019-4f8c-9b1c-dec5daacfae6.jpg?im_w=1200", property28);
+        imageRepository.save(image28_1);
+        Image image28_2 = new Image("https://a0.muscache.com/im/pictures/db15c490-a5c2-4576-b3ee-a822fa5fa7fb.jpg?im_w=720", property28);
+        imageRepository.save(image28_2);
+        Image image28_3 = new Image("https://a0.muscache.com/im/pictures/09ad4c33-1884-4332-ba11-8cd0b1f8bd82.jpg?im_w=1200", property28);
+        imageRepository.save(image28_3);
+
+
+
 
 
 
