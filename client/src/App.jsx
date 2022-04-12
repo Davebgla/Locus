@@ -4,6 +4,7 @@ import Request from './helpers/Request';
 import Pages from './pages/Pages';
 import Navbar from './components/Navbar';
 
+
 function App() {
 
   const [properties, setProperties] = useState([]);
@@ -63,7 +64,6 @@ function App() {
     <div className="App">
       <Router>
         <Navbar booking={booking} />
-        <Search />
         <Pages guest={guest} properties={properties} handleSubmit={handleSubmit} handleBookingSubmit={handleBookingSubmit} booking={booking} />
       </Router>
     </div>
