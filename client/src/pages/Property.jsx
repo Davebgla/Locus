@@ -5,7 +5,7 @@ import {Typography, Rating, } from "@mui/material"
 import BookingForm from '../components/BookingForm';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { GiShower, GiWifiRouter, GiKnifeFork, GiBed, GiWaterDrop, GiThermometerHot } from "react-icons/gi";
-
+import MapBox from '../components/MapBox';
 
 function Property({guest, properties, onCreateBooking}){
 
@@ -84,6 +84,7 @@ function Property({guest, properties, onCreateBooking}){
                     <BookingForm guest={guest} property={property} onCreateBooking={onCreateBooking} />
                     </FormWrapper>
             </Card>
+                    <MapBox property={property} />
         }
         </Wrapper>
     )

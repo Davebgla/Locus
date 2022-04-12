@@ -57,7 +57,7 @@ function App() {
       const request = new Request();
       const url = "/api/bookings";
       request.postBooking(url, booking)
-      window.location = "/";
+      .then(window.location = "/");
   }
 
   const updateBooking = (booking) => {
@@ -72,7 +72,7 @@ function App() {
       const request = new Request();
       const url = "/api/bookings/";
       request.delete(url, id)
-      window.location = "/"
+      .then(window.location = "/");
   }
 
   return (
