@@ -46,6 +46,8 @@ const GuestForm = ({onCreate}) => {
 const Wrapper = styled.div`
     
     form{
+        position: absolute;
+        z-index: 10;
         background: white;
         border: 1px solid #dedede;
         border-radius: 4px;
@@ -53,9 +55,10 @@ const Wrapper = styled.div`
         flex-direction: column;
         justify-content: space-around;
         margin: 0 auto;
+        left: 65%;
+        top: 28%;
         width: 20%;
-        padding: 5px 18px;
-        float: right;  
+        padding: 25px 35px; 
     }
 
     h3{
