@@ -12,7 +12,7 @@ function Home({properties, stateGuest, onCreate}) {
             <Card sx={{maxWidth: 1300, maxHeight: 700, margin: 0}}>
                 <CardMedia
                 component="img"
-                src="https://i.imgur.com/ESO6jet.png"
+                src="https://i.imgur.com/t0azK89.png"
                 alt="home-page-banner"
                 />
             </Card>
