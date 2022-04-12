@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import Request from './helpers/Request';
 import Pages from './pages/Pages';
 import Navbar from './components/Navbar';
-import Search from './components/Search';
 
 function App() {
 

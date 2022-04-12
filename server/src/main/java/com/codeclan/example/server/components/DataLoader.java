@@ -231,7 +231,100 @@ public class DataLoader implements ApplicationRunner {
         imageRepository.save(image20_2);
         Image image20_3 = new Image("https://a0.muscache.com/im/pictures/57872b0f-4510-4421-9706-b2b66bd864b8.jpg?im_w=720", property20);
         imageRepository.save(image20_3);
-      
+
+        Property property21 = new Property(host3, "Perth", "PH14QQ", 210, "Relax and take it easy at this unique and tranquil getaway featuring your own private luxury hot tub and sauna.", PropertyType.THREE_BED);
+        propertyRepository.save(property21);
+        Image image21_1 =new Image("https://a0.muscache.com/im/pictures/miso/Hosting-588206557606718839/original/7e794800-4f8e-4e16-b3b2-81d78f4c4704.jpeg?im_w=1440", property21);
+        imageRepository.save(image21_1);
+        Image image21_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-588206557606718839/original/7f5c319d-dc0d-4b51-b035-dbbf7fc2fbca.jpeg?im_w=1440", property21);
+        imageRepository.save(image21_2);
+        Image image21_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-588206557606718839/original/40c6f2ec-d6b6-44ac-a3fd-a653529833f1.jpeg?im_w=1440", property21);
+        imageRepository.save(image21_3);
+
+        Property property22 = new Property(host3, "Inverness", "IV38PJ", 167, "This beautiful Scandinavian Finlodge with hot tub sits in a peaceful setting with stunning views over Leachkin", PropertyType.THREE_BED);
+        propertyRepository.save(property22);
+        Image image22_1 =new Image("https://a0.muscache.com/im/pictures/miso/Hosting-48600110/original/57c1b476-a70e-4653-9563-a060e8c85b04.jpeg?im_w=1200", property22);
+        imageRepository.save(image22_1);
+        Image image22_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-48600110/original/375c9bcf-3f07-4768-af5d-80aae6eca7cd.jpeg?im_w=720", property22);
+        imageRepository.save(image22_2);
+        Image image22_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-48600110/original/4425e78a-6832-423d-aeed-b946bb14a951.jpeg?im_w=720", property22);
+        imageRepository.save(image22_3);
+
+        Property property23 = new Property(host3, "Stirling", "FK83SX", 125, "This property really does have the wow factor! A stunning contemporary refurbished cottage with its own enclosed private garden is a real hidden oasis", PropertyType.THREE_BED);
+        propertyRepository.save(property23);
+        Image image23_1 =new Image("https://a0.muscache.com/im/pictures/7f2a9544-283d-4e92-8217-80f81d7073f9.jpg?im_w=1200", property23);
+        imageRepository.save(image23_1);
+        Image image23_2 = new Image("https://a0.muscache.com/im/pictures/d6212515-1b8f-4885-b885-067c470a0456.jpg?im_w=1200", property23);
+        imageRepository.save(image23_2);
+        Image image23_3 = new Image("https://a0.muscache.com/im/pictures/ebe1a798-5e95-4896-a204-b5264c9c8fc6.jpg?im_w=720", property23);
+        imageRepository.save(image23_3);
+
+        Property property24 = new Property(host3, "Bogbain", "IV25BD", 140, "The property offers a spacious king size bed room with ensuite, kitchen and diner, large garden patio access and an outdoor private hot tub.", PropertyType.THREE_BED);
+        propertyRepository.save(property24);
+        Image image24_1 =new Image("https://a0.muscache.com/im/pictures/05d24154-1fc1-4850-9ce5-5ff9fa82e959.jpg?im_w=1200", property24);
+        imageRepository.save(image24_1);
+        Image image24_2 = new Image("https://a0.muscache.com/im/pictures/a37f635f-3e0f-4ef0-867b-13e555236bed.jpg?im_w=1200", property24);
+        imageRepository.save(image24_2);
+        Image image24_3 = new Image("https://a0.muscache.com/im/pictures/9ea916ea-4ca9-421b-bbcd-150bd4da51a6.jpg?im_w=1440", property24);
+        imageRepository.save(image24_3);
+
+        Property property25 = new Property(host3, "Monzie", "PH74HE", 170, "The cottage is very comfortable for two people looking to relax and either be as active or as relaxed as they like", PropertyType.TWO_BED);
+        propertyRepository.save(property25);
+        Image image25_1 =new Image("https://a0.muscache.com/im/pictures/miso/Hosting-4044962/original/ad4a5647-cbd7-48d7-8c2c-e5e9d841356c.jpeg?im_w=1200", property25);
+        imageRepository.save(image25_1);
+        Image image25_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-4044962/original/62bdf641-88d5-4dda-9dd0-99a5c1d3a5c3.jpeg?im_w=720", property25);
+        imageRepository.save(image25_2);
+        Image image25_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-4044962/original/45e11af0-8b0b-486b-89c5-5c4a8bfa6a74.jpeg?im_w=720", property25);
+        imageRepository.save(image25_3);
+
+        Property property26 = new Property(host3, "Cambusbarron", "FK79NA", 80, "This apartment consists of a living room with an attached kitchen,an excellent bedroom and a bathroom with a bath.", PropertyType.ONE_BED);
+        propertyRepository.save(property26);
+        Image image26_1 =new Image("https://a0.muscache.com/im/pictures/9071554b-7028-45ed-bca3-cdcb621f2ede.jpg?im_w=720", property26);
+        imageRepository.save(image26_1);
+        Image image26_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-48793902/original/b4e997b0-ff1f-4dc2-b9ff-d72d7b1cd7de.jpeg?im_w=720", property26);
+        imageRepository.save(image26_2);
+        Image image26_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-48793902/original/d5b7cc51-2cfa-4d14-a9eb-33390ea6b75a.jpeg?im_w=720", property26);
+        imageRepository.save(image26_3);
+
+        Property property27 = new Property(host3, "Nine Mile Burn", "EH269LS", 110, "These beautiful tents offer all the fun and adventure of living in the great outdoors and sleeping under canvas without giving up those home comforts. ", PropertyType.ONE_BED);
+        propertyRepository.save(property27);
+        Image image27_1 =new Image("https://a0.muscache.com/im/pictures/e38585f0-c019-4f8c-9b1c-dec5daacfae6.jpg?im_w=1200", property27);
+        imageRepository.save(image27_1);
+        Image image27_2 = new Image("https://a0.muscache.com/im/pictures/db15c490-a5c2-4576-b3ee-a822fa5fa7fb.jpg?im_w=720", property27);
+        imageRepository.save(image27_2);
+        Image image27_3 = new Image("https://a0.muscache.com/im/pictures/09ad4c33-1884-4332-ba11-8cd0b1f8bd82.jpg?im_w=1200", property27);
+        imageRepository.save(image27_3);
+
+        Property property28 = new Property(host3, "Kingscavil", "EH496NA", 150, "This lovely home offers 2 king size bedrooms and one bathroom with your own private living room and private entrance.", PropertyType.TWO_BED);
+        propertyRepository.save(property28);
+        Image image28_1 =new Image("https://a0.muscache.com/im/pictures/e9620caf-7d71-428c-9b39-4b4d6bcc2957.jpg?im_w=1200", property28);
+        imageRepository.save(image28_1);
+        Image image28_2 = new Image("https://a0.muscache.com/im/pictures/9c48fdd1-6d82-499f-9aa4-4a900fa0d72b.jpg?im_w=720", property28);
+        imageRepository.save(image28_2);
+        Image image28_3 = new Image("https://a0.muscache.com/im/pictures/cb220c03-36de-44d0-96a6-6e5fc6933ce2.jpg?im_w=720", property28);
+        imageRepository.save(image28_3);
+
+        Property property29 = new Property(host3, "Bonnington", "EH278EQ", 200, "The property has underfloor heating, parking and views looking onto a golf green and beautiful fairway and courtyard space.", PropertyType.TWO_BED);
+        propertyRepository.save(property29);
+        Image image29_1 =new Image("https://a0.muscache.com/im/pictures/e6046e36-100b-4817-b8f1-a30cb2df7c3a.jpg?im_w=1200", property29);
+        imageRepository.save(image29_1);
+        Image image29_2 = new Image("https://a0.muscache.com/im/pictures/11de790b-7858-4bdf-8469-18484eb8e79f.jpg?im_w=720", property29);
+        imageRepository.save(image29_2);
+        Image image29_3 = new Image("https://a0.muscache.com/im/pictures/2d879ca3-500a-4c2c-a620-35956a66a02e.jpg?im_w=720", property29);
+        imageRepository.save(image29_3);
+
+        Property property30 = new Property(host3, "Longniddry", "EH320PH", 100, "Great for family getaways, business & golfing trips or even just a couples break.", PropertyType.THREE_BED);
+        propertyRepository.save(property30);
+        Image image30_1 =new Image("https://a0.muscache.com/im/pictures/af300718-07fd-4f55-84ee-86f116c91124.jpg?im_w=720", property30);
+        imageRepository.save(image30_1);
+        Image image30_2 = new Image("https://a0.muscache.com/im/pictures/edb79508-c5fd-42e9-95ac-d3901c6018c2.jpg?im_w=1200", property30);
+        imageRepository.save(image30_2);
+        Image image30_3 = new Image("https://a0.muscache.com/im/pictures/3da44da2-3c02-414e-adf8-de4b1441e2f5.jpg?im_w=720", property30);
+        imageRepository.save(image30_3);
+
+
+
+
         Booking booking1 = new Booking(guest1, property1, 2, 1);
         bookingRepository.save(booking1);
 
