@@ -7,6 +7,7 @@ import {FaSearch} from 'react-icons/fa';
 import {useNavigate} from 'react-router-dom';
 
 
+
 function Navbar({booking}) {
 
   const [input, setInput] = useState("");
@@ -31,9 +32,9 @@ function Navbar({booking}) {
                       value={input} />
                     </div>
                   </FormStyle>
-                    <Tab href="/" sx={{color: "#f9473a"}} label="Home"/>
-                    <Link to="/properties">Properties</Link>
-                    <Link to={"/bookings/" + booking.id}>Manage Booking</Link>
+                    <StyledLink to="/">HOME</StyledLink>
+                    <StyledLink to="/properties">PROPERTIES</StyledLink>
+                    <StyledLink to={"/bookings/" + booking.id}>MANAGE BOOKING</StyledLink>
                 </Tabs>
             </Toolbar>
         </AppBar>
@@ -41,7 +42,14 @@ function Navbar({booking}) {
   )
 }
 
-export default Navbar
+const StyledLink = styled(Link)`
+      color: #f9473a;
+      text-decoration: none;
+      margin: 1rem;
+      position: relative;
+      top: 22px;
+`
+
 
 const FormStyle = styled.form`
 
@@ -51,7 +59,7 @@ const FormStyle = styled.form`
         width: 100%;
         position: relative;
         top: 22px;
-        /* margin-left: 17%; */
+
     }
     input{
         border: none;
@@ -62,7 +70,7 @@ const FormStyle = styled.form`
         border-radius: 1rem;
         border: none;
         outline: none;
-        width: 100%;
+        width: 200%;
         margin-bottom: 3rem;
     }
     svg{
@@ -73,3 +81,4 @@ const FormStyle = styled.form`
         color: white;
     }
 `
+export default Navbar
