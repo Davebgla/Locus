@@ -1,4 +1,5 @@
 import React from 'react'
+import { Typography, Rating, Box, CardContent, CardMedia} from "@mui/material"
 import {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import styled from 'styled-components';
@@ -30,11 +31,25 @@ function SearchedProperties({properties}) {
     return  <Grid>
         {filteredProperties?.map((property) => {
             return (
-                <Card key={property.location}>
-                <Link to={"/properties/" + property.id}>
-                <img src={property.images[0].url} width="300" height="200"/>
-                <h4>{property.location}</h4>
-                </Link>
+                <Card>
+                    <CardMedia
+                    component="img"
+                    sx={{ height: 340, width: 500, margin: 1, borderRadius: 3}}
+                    image= {property.images[0].url}
+                    alt="house in Oban"
+                />
+                <Box sx={{ display: 'flex', flexDirection: 'column', width: 500 }}>
+                    <CardContent sx={{ flex: '0 1 auto'}}>
+                            <h3>City: {property.location}</h3>
+                            <h3>Property Description: {property.description}</h3>
+                            <h3>Host Name: {property.host["firstName"]}</h3>
+                        <Typography component="legend"/>
+                        <Typography component="legend">Host Rating</Typography>
+                        <Rating name="read-only" value= {property.host["rating"]} readOnly />
+                            <p>£ {property.pricePerNight} / per night</p>
+                        <Link to={"/properties/" + property.id}>View</Link>
+                    </CardContent>
+                </Box>
                 </Card>
             );
         })}
@@ -42,25 +57,43 @@ function SearchedProperties({properties}) {
 }
 
 const Grid = styled.div`
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-grid-gap: 3rem;
+    /* display: grid; */
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 3rem;
+    margin: 4rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 `;
 
+// const Card = styled.div`
+// img{
+//     width: 100%;
+//     border-radius: 2rem;
+// }
+// a{
+//     text-decoration: none;
+// }
+// h4{
+//     text-align: center;
+//     padding: 1rem;
+//     color: black;
+// }
+// `;
+
+// const Wrapper = styled.div`
+//     margin: 4rem 0rem;
+//     display: flex;
+//     justify-content: space-around;
+// `;
+
+
 const Card = styled.div`
-img{
-    width: 100%;
-    border-radius: 2rem;
-}
-a{
-    text-decoration: none;
-}
-h4{
-    text-align: center;
-    padding: 1rem;
-    color: black;
-}
-`;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgb(68, 67, 67);
+    padding: 15px;
+    display: flex;
+`
 
 
 
