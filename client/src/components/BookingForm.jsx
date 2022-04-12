@@ -43,10 +43,14 @@ const BookingForm = ({guest, property, onCreateBooking}) => {
 
     return (
         <>
-        <h3>Book Your Stay</h3>
         <form onSubmit={handleSubmit}>
+        <h3>Book Your Stay</h3>
+            <p>Number of nights:</p>
             <input type="number" name="numberOfNights" placeholder="Number of nights" onChange={handleChange} value={stateBooking.numberOfNights}/>
+            <br/>
+            <p>Number of guests:</p>
             <input type="number" name="numberOfGuests" placeholder="Number of guests" onChange={handleChange} value={stateBooking.numberOfGuests}/>
+            <br/>
             <button type="submit">Book</button>
         </form>
         </>

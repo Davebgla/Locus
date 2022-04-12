@@ -43,6 +43,8 @@ function Navbar({booking}) {
   )
 }
 
+
+
 const StyledLink = styled(Link)`
       color: #f9473a;
       text-decoration: none;
