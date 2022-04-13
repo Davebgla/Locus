@@ -39,7 +39,7 @@ function SearchedProperties({properties}) {
                     alt="house in Oban"
                 />
                 <Box sx={{ display: 'flex', flexDirection: 'column', width: 500 }}>
-                    <CardContent sx={{ flex: '0 1 auto'}}>
+                    <CardContent sx={{ flex: '0 1 auto', margin: -2}}>
                             <h3>City: {property.location}</h3>
                             <h3>Property Description: {property.description}</h3>
                             <h3>Host Name: {property.host["firstName"]}</h3>
@@ -47,7 +47,7 @@ function SearchedProperties({properties}) {
                         <Typography component="legend">Host Rating</Typography>
                         <Rating name="read-only" value= {property.host["rating"]} readOnly />
                             <p>£ {property.pricePerNight} / per night</p>
-                        <Link to={"/properties/" + property.id}>View</Link>
+                        <StyledLink to={"/properties/" + property.id}>View</StyledLink>
                     </CardContent>
                 </Box>
                 </Card>
@@ -57,7 +57,6 @@ function SearchedProperties({properties}) {
 }
 
 const Grid = styled.div`
-    /* display: grid; */
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 3rem;
     margin: 4rem 0rem;
@@ -66,26 +65,22 @@ const Grid = styled.div`
     justify-content: space-around;
 `;
 
-// const Card = styled.div`
-// img{
-//     width: 100%;
-//     border-radius: 2rem;
-// }
-// a{
-//     text-decoration: none;
-// }
-// h4{
-//     text-align: center;
-//     padding: 1rem;
-//     color: black;
-// }
-// `;
-
-// const Wrapper = styled.div`
-//     margin: 4rem 0rem;
-//     display: flex;
-//     justify-content: space-around;
-// `;
+const StyledLink = styled(Link)`
+  display: inline-block;
+  font-size: 1em;
+  background: #f9473a;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  border-radius: 20px;
+  :hover{
+    letter-spacing: 5px;
+  }
+`
 
 
 const Card = styled.div`

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Typography, Rating} from "@mui/material"
-import { FaTrash } from 'react-icons/fa';
 import styled from "styled-components";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import swal from 'sweetalert';
 
 function Booking({booking, deleteBooking, updateBooking}){
 
@@ -30,8 +29,13 @@ function Booking({booking, deleteBooking, updateBooking}){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(stateBooking)
-        updateBooking(stateBooking);
+        updateBooking(stateBooking)
+        swal({
+            title: `Your booking has been amended ${stateBooking.guest.firstName}!`,
+            icon: "success",
+            button: "Continue"
+          })
+        .then(() => {window.location='/'})
     }
 
     const totalCost = stateBooking.numberOfNights * booking.property.pricePerNight;
@@ -116,7 +120,7 @@ const Wrapper = styled.div`
     form{
         background: white;
         border: 1px solid #dedede;
-        border-radius: 4px;
+        border-radius: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

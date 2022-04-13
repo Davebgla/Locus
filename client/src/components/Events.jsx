@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/splide/dist/css/splide.min.css';
-import { Link } from 'react-router-dom';
 
 function Events(){
 
@@ -23,9 +22,9 @@ function Events(){
     return(
         <div className="events">
         <Wrapper>
-            <h3>Events</h3>
+            <h3>Events Nearby</h3>
             <Splide options = {{
-                perPage: 2,
+                perPage: 4,
                 pagination: false,
                 drag: "free",
                 gap: "2rem"
@@ -36,7 +35,8 @@ function Events(){
                             <Card>
                                 <a href={event.link}>
                                     <p>{event.eventname}</p>
-                                    <img src={event.xlargeimageurl} />
+                                    <img src={event.xlargeimageurl} alt="event in scotland"/>
+                                <Gradient/>
                                 </a>
                             </Card>
                         </SplideSlide>
@@ -55,7 +55,7 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-    min-height: 25rem;
+    min-height: 15rem;
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
@@ -84,7 +84,16 @@ const Card = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        text-shadow: 2px black;
     }
+`;
+
+const Gradient = styled.div`
+        z-index: 3;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
 `;
 
 

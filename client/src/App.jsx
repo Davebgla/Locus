@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import Request from './helpers/Request';
 import Pages from './pages/Pages';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import swal from 'sweetalert';
 
 
 function App() {
@@ -53,11 +55,9 @@ function App() {
     }
 
   const handleBookingSubmit = (booking) => {
-      console.log(booking)
       const request = new Request();
       const url = "/api/bookings";
       request.postBooking(url, booking)
-      .then(window.location = "/");
   }
 
   const updateBooking = (booking) => {
@@ -65,14 +65,12 @@ function App() {
     const request = new Request();
     const url = "/api/bookings/" + booking.id;
     request.patch(url, booking)
-    .then(window.location = "/");
   }
 
   const deleteBooking = (id) => {
       const request = new Request();
       const url = "/api/bookings/";
       request.delete(url, id)
-      .then(window.location = "/");
   }
 
   return (
@@ -80,6 +78,7 @@ function App() {
       <Router>
         <Navbar booking={booking} />
         <Pages guest={guest} properties={properties} handleSubmit={handleSubmit} handleBookingSubmit={handleBookingSubmit} booking={booking} deleteBooking={deleteBooking} updateBooking={updateBooking} />
+        <Footer/>
       </Router>
     </div>
   );

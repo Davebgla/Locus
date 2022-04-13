@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { MapCenter } from "./MapCenter";
+// import styled from 'styled-components';
 
 const MapBox = ({property}) => {
 

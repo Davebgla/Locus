@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import styled from "styled-components";
+import swal from 'sweetalert';
 
 const GuestForm = ({onCreate}) => {
 
@@ -19,7 +20,14 @@ const GuestForm = ({onCreate}) => {
             lastName: "",
             email: "",
             contactNumber: ""
-        })    
+        })
+        swal(swal({
+            title: `${guest.firstName}, your account has been created!`,
+            text: "Proceed to properties or search to make a booking.",
+            icon: "success",
+            button: "Continue",
+          })
+          )
     }
 
     const handleChange = (event) => {
@@ -33,10 +41,10 @@ const GuestForm = ({onCreate}) => {
         <Wrapper>
         <form onSubmit={handleSubmit}>
             <h3>Create Account</h3>
-            <input type="text" placeholder="First Name" name="firstName" onChange={handleChange} value={guest.firstName}/>
-            <input type="text" placeholder="Last Name" name="lastName" onChange={handleChange} value={guest.lastName}/>
-            <input type="text" placeholder="Email" name="email" onChange={handleChange} value={guest.email}/>
-            <input type="text" placeholder="Contact Number" name="contactNumber" onChange={handleChange} value={guest.contactNumber}/>
+            <input type="text" placeholder="First Name" name="firstName" onChange={handleChange} value={guest.firstName} required/>
+            <input type="text" placeholder="Last Name" name="lastName" onChange={handleChange} value={guest.lastName} required/>
+            <input type="text" placeholder="Email" name="email" onChange={handleChange} value={guest.email} required/>
+            <input type="text" placeholder="Contact Number" name="contactNumber" onChange={handleChange} value={guest.contactNumber} required/>
             <button type="submit">Create</button>
         </form>
         </Wrapper>
@@ -50,7 +58,7 @@ const Wrapper = styled.div`
         z-index: 10;
         background: white;
         border: 1px solid #dedede;
-        border-radius: 4px;
+        border-radius: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

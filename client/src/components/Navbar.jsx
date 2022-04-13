@@ -28,7 +28,7 @@ function Navbar({booking}) {
                   <FormStyle onSubmit={submitHandler}>
                     <div>
                       <FaSearch> </FaSearch>
-                      <input onChange={(e) => setInput(e.target.value)} 
+                      <input placeholder='Where would you like to stay?' onChange={(e) => setInput(e.target.value)} 
                       type="text" 
                       value={input} />
                     </div>
@@ -51,7 +51,9 @@ const StyledLink = styled(Link)`
       margin: 1rem;
       position: relative;
       top: 22px;
-      :hover: {color: "black"}
+      :hover{
+        color: black;
+      }
 `
 
 
@@ -83,6 +85,12 @@ const FormStyle = styled.form`
         left: -2%;
         transform: translate(100%, -50%);
         color: white;
+    }
+
+    input::-webkit-input-placeholder{
+        color: white;
+        font-size: 1rem;
+        opacity: 0.5;
     }
 `
 export default Navbar

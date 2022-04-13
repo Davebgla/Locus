@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
+import swal from 'sweetalert';
 
 const BookingForm = ({guest, property, onCreateBooking}) => {
 
@@ -21,16 +22,16 @@ const BookingForm = ({guest, property, onCreateBooking}) => {
         }
     }, [guest, property])
 
-    // useEffect(() => {
-    //     if(booking){
-    //         let copiedBooking = {...booking};
-    //         setBooking(copiedBooking);
-    //     }
-    // }, [booking])
-
     const handleSubmit = (event) => {
         event.preventDefault();
         onCreateBooking(stateBooking);
+        swal({
+            title: `Pack your bags ${guest.firstName}!`,
+            text: `You're staying in ${property.location} for ${stateBooking.numberOfNights} nights.`,
+            icon: "success",
+            button: "Confirm"
+          })
+        .then(() => {window.location='/'})
     }
 
     const handleChange = (event) => {
