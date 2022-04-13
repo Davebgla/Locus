@@ -322,6 +322,41 @@ public class DataLoader implements ApplicationRunner {
         Image image30_3 = new Image("https://a0.muscache.com/im/pictures/3da44da2-3c02-414e-adf8-de4b1441e2f5.jpg?im_w=720", property30);
         imageRepository.save(image30_3);
 
+        Property property31 = new Property(host3, "Glasgow", "G11LD", 200, "Close to pubs, bars and restaurants galore, we are in a great spot for all Glasgow-bound travellers.", PropertyType.TWO_BED);
+        propertyRepository.save(property31);
+        Image image31_1 =new Image("https://a0.muscache.com/im/pictures/miso/Hosting-563510676214280760/original/bd2e0399-eb64-4e40-88f7-4cc1a217a8bc.jpeg?im_w=1200", property31);
+        imageRepository.save(image31_1);
+        Image image31_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-563510676214280760/original/fffd4e73-d312-436f-9961-0e6e87aad0e5.jpeg?im_w=720", property31);
+        imageRepository.save(image31_2);
+        Image image31_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-563510676214280760/original/7906f8ee-4827-49ab-8927-3257eefe0fb7.jpeg?im_w=720", property31);
+        imageRepository.save(image31_3);
+
+        Property property32 = new Property(host3, "Glasgow", "G402JZ", 114, "Feel the historical charm of Old Glasgow in a newly renovated flat within a traditional tenement building.", PropertyType.TWO_BED);
+        propertyRepository.save(property32);
+        Image image32_1 =new Image("https://a0.muscache.com/im/pictures/1143b525-597e-4f81-adf1-9d5994c46c93.jpg?im_w=720", property32);
+        imageRepository.save(image32_1);
+        Image image32_2 = new Image("https://a0.muscache.com/im/pictures/e57576cc-01cb-4453-8b59-73707306172c.jpg?im_w=720", property32);
+        imageRepository.save(image32_2);
+        Image image32_3 = new Image("https://a0.muscache.com/im/pictures/a391f5be-db7e-464b-aad0-a2265ac6665f.jpg?im_w=1440", property32);
+        imageRepository.save(image32_3);
+
+        Property property33 = new Property(host3, "Glasgow", "G25LD", 108, "Enjoy the rarity of having a private free parking space so close to the centre of Glasgow.", PropertyType.TWO_BED);
+        propertyRepository.save(property33);
+        Image image33_1 =new Image("https://a0.muscache.com/im/pictures/3f139479-09e8-4b77-b93e-fb185809af66.jpg?im_w=1200", property33);
+        imageRepository.save(image33_1);
+        Image image33_2 = new Image("https://a0.muscache.com/im/pictures/2d413dca-59ff-4582-b124-e3f9cb800225.jpg?im_w=1200", property33);
+        imageRepository.save(image33_2);
+        Image image33_3 = new Image("https://a0.muscache.com/im/pictures/76f0826d-27f8-40f2-9db2-80d18013b8c8.jpg?im_w=1200", property33);
+        imageRepository.save(image33_3);
+
+        Property property34 = new Property(host3, "Glasgow", "G25LD", 108, "Enjoy the rarity of having a private free parking space so close to the centre of Glasgow.", PropertyType.TWO_BED);
+        propertyRepository.save(property34);
+        Image image34_1 =new Image("https://a0.muscache.com/im/pictures/miso/Hosting-52297421/original/532752a4-0384-41ad-ad76-981abfa05a47.jpeg?im_w=1200", property34);
+        imageRepository.save(image34_1);
+        Image image34_2 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-52297421/original/9ad14cc7-8565-42b9-80fe-0cb7db074e2c.jpeg?im_w=1200", property34);
+        imageRepository.save(image34_2);
+        Image image34_3 = new Image("https://a0.muscache.com/im/pictures/miso/Hosting-52297421/original/c43efb02-a831-4d03-9ec0-b8fd92927e66.jpeg?im_w=1200", property34);
+        imageRepository.save(image34_3);
 
 
 
