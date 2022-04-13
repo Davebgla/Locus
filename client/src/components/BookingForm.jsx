@@ -21,13 +21,6 @@ const BookingForm = ({guest, property, onCreateBooking}) => {
         }
     }, [guest, property])
 
-    // useEffect(() => {
-    //     if(booking){
-    //         let copiedBooking = {...booking};
-    //         setBooking(copiedBooking);
-    //     }
-    // }, [booking])
-
     const handleSubmit = (event) => {
         event.preventDefault();
         onCreateBooking(stateBooking);

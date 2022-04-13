@@ -16,7 +16,7 @@ function PropertyList({properties}){
                 alt="house in Oban"
               />
               <Box sx={{ display: 'flex', flexDirection: 'column', width: 500 }}>
-                <CardContent sx={{ flex: '0 1 auto'}}>
+                <CardContent sx={{ flex: '0 1 auto', margin: -2}}>
                   <h3>City: {property.location}</h3>
                   <h3>Property Description: {property.description}</h3>
                   <h3>Host Name: {property.host["firstName"]}</h3>
@@ -74,14 +74,4 @@ const Card = styled.div`
     padding: 15px;
     display: flex;
     text-decoration: none;
-    /* flex-direction: column;
-    justify-content: space-around; */
-    /* align-items: center;
-    width: 35%; */
-
-    /* img{
-        border-radius: 2rem;
-        width: 80%;
-        height: 70%;
-    } */
 `

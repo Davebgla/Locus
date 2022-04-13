@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { MapCenter } from "./MapCenter";
+// import styled from 'styled-components';
 
 const MapBox = ({property}) => {
 
@@ -44,6 +45,7 @@ const MapBox = ({property}) => {
                 <Popup>
                     <h3>{property.location}</h3>
                 </Popup>
+                <img href = "https://i.imgur.com/O7vDxyB.png"/>
             </Marker>
         </MapContainer>
       )
@@ -51,3 +53,7 @@ const MapBox = ({property}) => {
 }
 
 export default MapBox;
+
+// const Marker =  styled.marker`
+//     img
+// `
