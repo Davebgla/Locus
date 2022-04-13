@@ -63,9 +63,6 @@ function Property({guest, properties, onCreateBooking}){
                     <p>£ {property.pricePerNight} / per night</p>
                     <IconContainer>
                     <h5>Available at this property:</h5>
-                    {/* <Tooltip title="Steamy Shower" arrow>
-                        <GiShower size={30}/>
-                     </Tooltip> */}
                     <ul>
                         <Tooltip title="Steamy Shower" arrow>
                         <li><GiShower  size={30}/></li>
