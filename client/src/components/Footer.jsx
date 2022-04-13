@@ -18,10 +18,17 @@ function Footer() {
 
 const Wrapper = styled.div`
     background: #f9473a;
+    padding: 0.5%;
+   
 
     p{
-        text-align: center;
         font-weight: 600;
+        color: white;
+           
+    }
+    svg{
+      color: white;
+      
     }
 `;
 
