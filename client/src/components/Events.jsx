@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/splide/dist/css/splide.min.css';
-import { Link } from 'react-router-dom';
 
 function Events(){
 
@@ -36,7 +35,7 @@ function Events(){
                             <Card>
                                 <a href={event.link}>
                                     <p>{event.eventname}</p>
-                                    <img src={event.xlargeimageurl} />
+                                    <img src={event.xlargeimageurl} alt="event in scotland"/>
                                 </a>
                             </Card>
                         </SplideSlide>

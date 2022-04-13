@@ -24,7 +24,7 @@ function Featured({properties}) {
                             <Card>
                                 <Link to={"/properties/" + property.id}>
                                     <p>{property.location}</p>
-                                    <img src={property.images[0].url} width="300" height="200"/>
+                                    <img src={property.images[0].url} width="300" height="200" alt="property in your chosen area"/>
                                     <Gradient />
                                 </Link>
                             </Card>
@@ -38,7 +38,6 @@ function Featured({properties}) {
 }
 
 const Wrapper = styled.div`
-    /* margin: 4rem 0rem; */
     margin: 5% 10%;
 `;
 
