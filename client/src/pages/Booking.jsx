@@ -31,7 +31,7 @@ function Booking({booking, deleteBooking, updateBooking}){
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(stateBooking)
-        updateBooking(stateBooking);
+        updateBooking(stateBooking) 
     }
 
     const totalCost = stateBooking.numberOfNights * booking.property.pricePerNight;
