@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import styled from "styled-components";
-import {Typography, Rating, } from "@mui/material"
+import {Typography, Rating, Tooltip, } from "@mui/material"
 import BookingForm from '../components/BookingForm';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { GiShower, GiWifiRouter, GiKnifeFork, GiBed, GiWaterDrop, GiThermometerHot } from "react-icons/gi";
+import { GiBathtub, GiWifiRouter, GiKnifeFork, GiBed, GiWaterDrop, GiThermometerHot } from "react-icons/gi";
 import MapBox from '../components/MapBox';
 
 function Property({guest, properties, onCreateBooking}){
@@ -64,17 +64,27 @@ function Property({guest, properties, onCreateBooking}){
                     <IconContainer>
                     <h5>Available at this property:</h5>
                     <ul>
-                        <li><GiShower style={{marginLeft: -110}} size={30}/></li>
+                        <Tooltip title="Bath and Shower" arrow>
+                        <li><GiBathtub  size={30}/></li>
+                        </Tooltip>
 
+                        <Tooltip title="Free Wifi" arrow>
                         <li><GiWifiRouter size={30}/></li>
+                        </Tooltip>
 
+                        <Tooltip title="Free Food" arrow>
                         <li><GiKnifeFork size={30}/></li>
+                        </Tooltip>
 
+                        <Tooltip title="Comfy Beds" arrow>
                         <li><GiBed size={30}/></li>
-
+                        </Tooltip>
+                        <Tooltip title="Steamy Hot Water" arrow>
                         <li><GiWaterDrop size={30}/></li>
-
+                        </Tooltip>
+                        <Tooltip title="Proper Heating" arrow>
                         <li><GiThermometerHot size={30}/></li>
+                        </Tooltip>
 
                     </ul>
                     </IconContainer>
@@ -142,6 +152,20 @@ const FormWrapper = styled.div`
 
 const IconContainer = styled.div`
     display: inline;
+    justify-content: left;
+    margin: 0;
+
+    ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li{
+    display: inline;
+    margin-right: 5rem;
+    }
+}
+
 `;
 
 const TextContainer = styled.div`

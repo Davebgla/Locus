@@ -18,15 +18,6 @@ code {
   text-align: center;
 }
 
-ul{
-  list-style-type: none;
-}
-
-li{
-  display: inline;
-  margin-left: 5rem;
-}
-
 .leaflet-container{
   width: 100%;
   height: 500px;
