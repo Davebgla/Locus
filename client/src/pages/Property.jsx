@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {Typography, Rating, Tooltip, } from "@mui/material"
 import BookingForm from '../components/BookingForm';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { GiShower, GiWifiRouter, GiKnifeFork, GiBed, GiWaterDrop, GiThermometerHot } from "react-icons/gi";
+import { GiBathtub, GiWifiRouter, GiKnifeFork, GiBed, GiWaterDrop, GiThermometerHot } from "react-icons/gi";
 import MapBox from '../components/MapBox';
 
 function Property({guest, properties, onCreateBooking}){
@@ -64,8 +64,8 @@ function Property({guest, properties, onCreateBooking}){
                     <IconContainer>
                     <h5>Available at this property:</h5>
                     <ul>
-                        <Tooltip title="Steamy Shower" arrow>
-                        <li><GiShower  size={30}/></li>
+                        <Tooltip title="Bath and Shower" arrow>
+                        <li><GiBathtub  size={30}/></li>
                         </Tooltip>
 
                         <Tooltip title="Free Wifi" arrow>
@@ -79,7 +79,7 @@ function Property({guest, properties, onCreateBooking}){
                         <Tooltip title="Comfy Beds" arrow>
                         <li><GiBed size={30}/></li>
                         </Tooltip>
-                        <Tooltip title="Hot Shit Water" arrow>
+                        <Tooltip title="Steamy Hot Water" arrow>
                         <li><GiWaterDrop size={30}/></li>
                         </Tooltip>
                         <Tooltip title="Proper Heating" arrow>
