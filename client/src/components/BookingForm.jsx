@@ -1,5 +1,8 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
+import swal from 'sweetalert';
+import { Link } from 'react-router-dom';
+import { FaWindowRestore } from 'react-icons/fa';
 
 const BookingForm = ({guest, property, onCreateBooking}) => {
 
@@ -24,6 +27,13 @@ const BookingForm = ({guest, property, onCreateBooking}) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         onCreateBooking(stateBooking);
+        swal({
+            title: `Pack your bags ${guest.firstName}!`,
+            text: `You're staying in ${property.location} for ${stateBooking.numberOfNights} nights.`,
+            icon: "success",
+            button: "Confirm"
+          })
+        .then(() => {window.location='/'})
     }
 
     const handleChange = (event) => {

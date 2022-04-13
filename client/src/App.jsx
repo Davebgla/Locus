@@ -54,11 +54,9 @@ function App() {
     }
 
   const handleBookingSubmit = (booking) => {
-      console.log(booking)
       const request = new Request();
       const url = "/api/bookings";
       request.postBooking(url, booking)
-      .then(window.location = "/");
   }
 
   const updateBooking = (booking) => {

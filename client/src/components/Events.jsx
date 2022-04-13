@@ -23,9 +23,9 @@ function Events(){
     return(
         <div className="events">
         <Wrapper>
-            <h3>Events</h3>
+            <h3>Events Nearby</h3>
             <Splide options = {{
-                perPage: 2,
+                perPage: 4,
                 pagination: false,
                 drag: "free",
                 gap: "2rem"
@@ -55,7 +55,7 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-    min-height: 25rem;
+    min-height: 15rem;
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
