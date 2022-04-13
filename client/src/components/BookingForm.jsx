@@ -1,8 +1,6 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
 import swal from 'sweetalert';
-import { Link } from 'react-router-dom';
-import { FaWindowRestore } from 'react-icons/fa';
 
 const BookingForm = ({guest, property, onCreateBooking}) => {
 

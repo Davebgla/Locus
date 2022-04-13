@@ -45,7 +45,6 @@ const MapBox = ({property}) => {
                 <Popup>
                     <h3>{property.location}</h3>
                 </Popup>
-                <img href = "https://i.imgur.com/O7vDxyB.png"/>
             </Marker>
         </MapContainer>
       )
@@ -53,7 +52,3 @@ const MapBox = ({property}) => {
 }
 
 export default MapBox;
-
-// const Marker =  styled.marker`
-//     img
-// `
