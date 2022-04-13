@@ -8,7 +8,7 @@ function Footer() {
         <Wrapper>
             <p>Locus Inc 2022 </p>
             <TiSocialInstagram size={30}/>
-            <TiSocialFacebook size={30}/>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><TiSocialFacebook size={30}/></a>
             <TiSocialTwitter size={30}/>
         </Wrapper>
 
