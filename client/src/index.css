@@ -20,11 +20,13 @@ code {
 
 ul{
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 li{
   display: inline;
-  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .leaflet-container{

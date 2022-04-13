@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import styled from "styled-components";
-import {Typography, Rating, } from "@mui/material"
+import {Typography, Rating, Tooltip, } from "@mui/material"
 import BookingForm from '../components/BookingForm';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { GiShower, GiWifiRouter, GiKnifeFork, GiBed, GiWaterDrop, GiThermometerHot } from "react-icons/gi";
@@ -63,18 +63,31 @@ function Property({guest, properties, onCreateBooking}){
                     <p>£ {property.pricePerNight} / per night</p>
                     <IconContainer>
                     <h5>Available at this property:</h5>
+                    {/* <Tooltip title="Steamy Shower" arrow>
+                        <GiShower size={30}/>
+                     </Tooltip> */}
                     <ul>
-                        <li><GiShower style={{marginLeft: -110}} size={30}/></li>
+                        <Tooltip title="Steamy Shower" arrow>
+                        <li><GiShower  size={30}/></li>
+                        </Tooltip>
 
+                        <Tooltip title="Free Wifi" arrow>
                         <li><GiWifiRouter size={30}/></li>
+                        </Tooltip>
 
+                        <Tooltip title="Free Food" arrow>
                         <li><GiKnifeFork size={30}/></li>
+                        </Tooltip>
 
+                        <Tooltip title="Comfy Beds" arrow>
                         <li><GiBed size={30}/></li>
-
+                        </Tooltip>
+                        <Tooltip title="Hot Shit Water" arrow>
                         <li><GiWaterDrop size={30}/></li>
-
+                        </Tooltip>
+                        <Tooltip title="Proper Heating" arrow>
                         <li><GiThermometerHot size={30}/></li>
+                        </Tooltip>
 
                     </ul>
                     </IconContainer>
@@ -142,6 +155,12 @@ const FormWrapper = styled.div`
 
 const IconContainer = styled.div`
     display: inline;
+    justify-content: left;
+    margin: 0;
+
+    ul{
+        margin: 0;
+    }
 `;
 
 const TextContainer = styled.div`
