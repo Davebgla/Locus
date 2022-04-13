@@ -156,8 +156,16 @@ const IconContainer = styled.div`
     margin: 0;
 
     ul{
-        margin: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li{
+    display: inline;
+    margin-right: 5rem;
     }
+}
+
 `;
 
 const TextContainer = styled.div`
