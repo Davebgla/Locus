@@ -99,7 +99,7 @@ const FormWrapper = styled.div`
     form{
         background: white;
         border: 1px solid #dedede;
-        border-radius: 4px;
+        border-radius: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
