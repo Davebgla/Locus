@@ -4,6 +4,7 @@ import Request from './helpers/Request';
 import Pages from './pages/Pages';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import swal from 'sweetalert';
 
 
 function App() {
@@ -64,14 +65,12 @@ function App() {
     const request = new Request();
     const url = "/api/bookings/" + booking.id;
     request.patch(url, booking)
-    .then(window.location = "/");
   }
 
   const deleteBooking = (id) => {
       const request = new Request();
       const url = "/api/bookings/";
       request.delete(url, id)
-      .then(window.location = "/");
   }
 
   return (
